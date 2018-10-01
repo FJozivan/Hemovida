@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('cabecalho')
 @extends('layouts.cabecalho')
 @stop
@@ -32,7 +31,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										@@foreach ($dados as $dado)
+										@foreach ($dados as $dado)
 
 											<tr>
 												<td>{{ $dado->nome }}</td>
