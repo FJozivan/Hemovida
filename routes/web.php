@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'doadorController@ver_doadores');
 
 Route::get('cadastro_doador', 'doadorController@CadastroDoador');
 
 Route::post('cadastrar_doador', 'doadorController@CadastrarDoador');
 
-Route::get('doadores', 'doadorController@ver_doadores');
+///Route::get('doadores', 'doadorController@ver_doadores');
