@@ -32,7 +32,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										@@foreach ($dados as $dado)
+										@foreach ($dados as $dado)
 
 											<tr>
 												<td>{{ $dado->nome }}</td>
