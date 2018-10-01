@@ -42,6 +42,6 @@ class doadorController extends Controller
 	public function ver_doadores() {
 
         $dados = doador::all();
-        return view('doadores_cadastrados', compact($dados));
+        return view('doadores_cadastrados', compact('dados'));
     }    
 }
