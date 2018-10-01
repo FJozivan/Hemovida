@@ -93,14 +93,14 @@
 									<div class="form-group row">
 										<label for="senha" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Senha:</label>
 										<div class="col-lg-10 col-sm-10">
-											<input type="text" class="form-control" id="senha" name="senha">
+											<input type="password" class="form-control" id="senha" name="senha">
 										</div>
 									</div>
 
 									<div class="form-group row">
 										<label for="confirma_senha" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Confirmar senha:</label>
 										<div class="col-lg-10 col-sm-10">
-											<input type="text" class="form-control" id="senha" name="senha2">
+											<input type="password" class="form-control" id="senha" name="senha2">
 										</div>
 									</div>
 
