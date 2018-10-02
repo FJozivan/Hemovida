@@ -19,8 +19,8 @@
                 <div style="border-radius: 10px">
                     <form action="/action_page.php" class="mt-3 mb-3 ml-5 mr-5">
                         <div class="form-group">
-                        <label for="email">CPF:</label>
-                        <input type="email" class="form-control" id="email">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" class="form-control" id="cpf" maxlength="14">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Senha:</label>
@@ -47,4 +47,12 @@
 
     </div>
 </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script>
+    $(document).ready(function () { 
+        var $seuCampoCpf = $("#cpf");
+        $seuCampoCpf.mask('000.000.000-00', {reverse: true});
+    });
+</script>
 @stop
