@@ -34,9 +34,9 @@ class doadorController extends Controller
     	$doador->referencia = $requisicao->referencia;
     	$doador->tipo_sanguineo = $requisicao->tipo_sanguineo;
 
-    	//dd($doador);
+    	//dd($doador)
     	$doador->save();
-
+        dd($doador)
     }
 
 	public function ver_doadores() {
