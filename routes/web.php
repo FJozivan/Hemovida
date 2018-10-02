@@ -13,6 +13,8 @@
 
 Route::get('/', 'doadorController@ver_doadores');
 
+Route::get('/login', 'loginController@FazerLogin');
+
 Route::get('cadastro_doador', 'doadorController@CadastroDoador');
 
 Route::post('cadastrar_doador', 'doadorController@CadastrarDoador');
