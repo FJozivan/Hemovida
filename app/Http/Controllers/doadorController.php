@@ -36,7 +36,7 @@ class doadorController extends Controller
 
     	//dd($doador)
     	$doador->save();
-        dd($doador)
+        dd($doador);
     }
 
 	public function ver_doadores() {
