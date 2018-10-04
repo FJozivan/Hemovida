@@ -25,7 +25,7 @@ class doadorController extends Controller
     	$doador->sexo = $requisicao->sexo;
     	$doador->email = $requisicao->email;
     	$doador->profissao = $requisicao->profissao;
-    	$doador->senha = $requisicao->senha;
+    	$doador->senha = $requisicao->senha_confirmada;
     	$doador->cep = $requisicao->cep;
     	$doador->rua = $requisicao->rua;
     	$doador->numero = $requisicao->numero;
@@ -34,9 +34,8 @@ class doadorController extends Controller
     	$doador->referencia = $requisicao->referencia;
     	$doador->tipo_sanguineo = $requisicao->tipo_sanguineo;
 
-    	//dd($doador)
-    	$doador->save();
-        return view('login');
+    	//dd($doador);
+    	$doador->save(); 
     }
 
 	public function ver_doadores() {

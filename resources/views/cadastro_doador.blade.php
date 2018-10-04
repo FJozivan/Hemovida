@@ -98,9 +98,9 @@
 									</div>
 
 									<div class="form-group row">
-										<label for="confirma_senha" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Confirmar senha:</label>
+										<label for="senha_confirmada" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Confirmar senha:</label>
 										<div class="col-lg-10 col-sm-10">
-											<input type="password" class="form-control" id="confirma_senha" name="senha2">
+											<input type="password" class="form-control" id="senha_confirmada" name="senha_confirmada">
 											<div class="invalid-feedback">
 												Confirmação de senha não confere
 											</div>
@@ -255,18 +255,18 @@
 			}
 		});
 	});
-	$("#confirma_senha").on("change paste keyup", function() {
+	$("#senha_confirmada").on("change paste keyup", function() {
 		confirmaSenha();
 	});
 	$("#senha").on("change paste keyup", function() {
 		confirmaSenha();
 	});
 	function confirmaSenha() {
-		if ($("#confirma_senha").val() !== $("#senha").val()){
-			$("#confirma_senha").addClass("is-invalid");
+		if ($("#senha_confirmada").val() !== $("#senha").val()){
+			$("#senha_confirmada").addClass("is-invalid");
 			$("#cadastrar").prop('disabled', true);
 		} else {
-			$("#confirma_senha").removeClass("is-invalid");
+			$("#senha_confirmada").removeClass("is-invalid");
 			$("#cadastrar").prop('disabled', false);
 		}
 	}
