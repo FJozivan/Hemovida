@@ -19,4 +19,10 @@ Route::get('cadastro_doador', 'doadorController@CadastroDoador');
 
 Route::post('cadastrar_doador', 'doadorController@CadastrarDoador');
 
+Route::post('logar', 'loginController@logar');
+
+// Envio de emails
+
+Route::get('/enviar_mail', 'appController@enviarEmail');
+
 ///Route::get('doadores', 'doadorController@ver_doadores');
