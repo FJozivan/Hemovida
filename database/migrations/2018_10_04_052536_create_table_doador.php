@@ -46,7 +46,7 @@ class CreateTableDoador extends Migration
 
             $table->string('tipo_sanguineo',45)->nullable($value = false);
 
-            $table->string('profissão',45);
+            $table->string('profissao',45);
 
 
 
