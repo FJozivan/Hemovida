@@ -16,6 +16,22 @@ class doadorController extends Controller
 
     public function CadastrarDoador(Request $requisicao) {
 
+        $this->validate($requisicao,[
+        
+            'nome' => 'required',
+            'sobrenome' => 'required',
+            'cpf' => 'required',
+            'data_nascimento' => 'required',
+            'sexo' => 'required',
+            'email' => 'required',
+            'senha_confirmada' => 'required',
+            'cep' => 'required',
+            'rua' => 'required',
+            'bairro' => 'required',
+            'tipo_sanguineo' => 'required'
+
+        ]);
+
         $doador = new doador();
 
         $doador->nome = $requisicao->nome;
