@@ -28,7 +28,10 @@ class doadorController extends Controller
             'cep' => 'required',
             'rua' => 'required',
             'bairro' => 'required',
-            'tipo_sanguineo' => 'required'
+            'tipo_sanguineo' => 'required',
+            'cidade' => 'required',
+            'numero' => 'required'
+
 
         ]);
 
