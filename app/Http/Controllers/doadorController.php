@@ -36,7 +36,7 @@ class doadorController extends Controller
 
     	//dd($doador)
     	$doador->save();
-        dd($doador);
+        return view('login');
     }
 
 	public function ver_doadores() {

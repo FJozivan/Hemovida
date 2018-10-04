@@ -42,6 +42,7 @@
 										
 									</tbody>
 								</table>
+								<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
 							</div>
 						</div>
 					</div>

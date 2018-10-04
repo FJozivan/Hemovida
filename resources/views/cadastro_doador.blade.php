@@ -129,7 +129,7 @@
 										<!-- </div> -->
 										<div class="row">
 											<label for="numero" class="col-lg-3 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span>Nº:</label>
-											<div class="col-lg-4 col-sm-2">
+											<div class="col-lg-4 col-sm-4">
 												<input type="text" class="form-control" id="numero" name="numero">
 											</div>
 										</div>
@@ -182,7 +182,7 @@
 											<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;">Cancelar</button>		
 										</div>
 									</div>
-									<a href="doadores"> Ver doadores cadastrados</a>
+									<a href="/"> Ver doadores cadastrados</a>
 
 								</div>
 							</form>			
@@ -197,6 +197,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
 <script>
 	$(document).ready(function() {
+		$("#cpf").mask('000.000.000-00', {reverse: true});
 		$("#cep").mask('00000-000', {reverse: true});
 
 		function limpa_formulário_cep() {

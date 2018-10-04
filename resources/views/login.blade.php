@@ -7,12 +7,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <img class="mt-3 mb-5" src="./img/hemovida.png" class="img-fluid" style="margin:auto; width: 300px" />
+                <img class="mt-3 mb-5" src="./img/hemovida.png" class="img-fluid" style="margin:auto; width: 300px;" />
             </div>
         </div>
         <div class="row">
             <div class="col-lg-3"></div>
-            <div class="col-lg-6" style="background-color: white; border-radius: 10px; box-shadow: 0px 0px 1px">
+            <div class="col-lg-6" style="background-color: white; border-radius: 10px; box-shadow: 0px 0px 1px; margin-top: 10px">
 
                 <center><img class=" mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; border-radius: 50px; margin-top: -40px; box-shadow: 0px 0px 1px" /></center>
                 
@@ -39,7 +39,7 @@
 
                 <div class="mt-2 text-center">
                     <button type="submit" class="btn btn-info mr-2">Entrar</button>
-                    <button type="submit" class="btn btn-secondary ml-2">Cancelar</button>
+                    <a href="/" class="btn btn-secondary ml-2">Cancelar</a>
                 </div>
 
             </form>    
