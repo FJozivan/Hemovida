@@ -101,6 +101,9 @@
 										<label for="confirma_senha" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Confirmar senha:</label>
 										<div class="col-lg-10 col-sm-10">
 											<input type="password" class="form-control" id="confirma_senha" name="senha2">
+											<div class="invalid-feedback">
+												Confirmação de senha não confere
+											</div>
 										</div>
 									</div>
 
@@ -173,7 +176,7 @@
 									</div>
 									<div class="row text-center">
 										<div class="col-lg-6 col-sm-12 text-center mt-4 col-">
-											<button type="submit" class="btn btn-danger" style="font-weight: bold; font-size: 16px;">Cadastrar</button>
+											<button id="cadastrar" type="submit" class="btn btn-danger" style="font-weight: bold; font-size: 16px;">Cadastrar</button>
 										</div>
 										<div class="col-lg-6 col-sm-10 mt-4 col-">
 											<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;">Cancelar</button>		
@@ -251,5 +254,20 @@
 			}
 		});
 	});
+	$("#confirma_senha").on("change paste keyup", function() {
+		confirmaSenha();
+	});
+	$("#senha").on("change paste keyup", function() {
+		confirmaSenha();
+	});
+	function confirmaSenha() {
+		if ($("#confirma_senha").val() !== $("#senha").val()){
+			$("#confirma_senha").addClass("is-invalid");
+			$("#cadastrar").prop('disabled', true);
+		} else {
+			$("#confirma_senha").removeClass("is-invalid");
+			$("#cadastrar").prop('disabled', false);
+		}
+	}
 </script>
 @stop
