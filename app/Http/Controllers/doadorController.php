@@ -25,7 +25,7 @@ class doadorController extends Controller
     	$doador->sexo = $requisicao->sexo;
     	$doador->email = $requisicao->email;
     	$doador->profissao = $requisicao->profissao;
-    	$doador->senha = $requisicao->senha_confirmada;
+    	$doador->senha = md5($requisicao->senha_confirmada);
     	$doador->cep = $requisicao->cep;
     	$doador->rua = $requisicao->rua;
     	$doador->numero = $requisicao->numero;
