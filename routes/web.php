@@ -22,7 +22,7 @@ Route::post('cadastrar_doador', 'doadorController@CadastrarDoador');
 Route::post('logar', 'loginController@logar');
 
 // Cadastro de funcionarios
-//Route::get('cadastro_funcionario', 'master_controller@Cadastro_funcionario');
+Route::get('cadastro_funcionario', 'master_controller@Cadastro_funcionario');
 
 // Envio de emails
 Route::get('/enviar_mail', 'appController@enviarEmail');
