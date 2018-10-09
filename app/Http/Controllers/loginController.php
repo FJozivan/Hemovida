@@ -31,37 +31,22 @@ class loginController extends Controller
         $dados = doador::where('cpf', $requisicao->cpf)->first();
 
         if ($dados == null) {
-            $result = "Não existe essa conta de usuário";
+            $titulo = "Login";
+            $erro2 = "Não existe essa conta de usuário";
+            return view('login', compact('erro2','titulo'));
 
         }else{
 
             if ($dados->senha== md5($requisicao->senha)) {
-
-                $result = 'Login com sucesso!';
+                $logado = $dados->nome;
+                return view('cadastro_funcionario', compact('titulo','logado'));
 
             }else{
-
-                $result = 'A senha deste usuario não confere!';
+                $titulo = "Login";
+                $erro2 = 'A senha deste usuario não confere!';
+                return view('login', compact('erro2','titulo'));
             }
         }
-        
-
-        return $result;
-
-
-        // $login = $requisicao->login;
-    	// $senha = md5($requisicao->senha);
-    	// //dd($login);
-    	// $result = 0;
-
-    	// if ($result > 0) {
-    		
-    	// }else{
-    		
-    	// 	$invalido = true;
-    	// 	$titulo = 'Login';
-
-    	// 	return view('login', compact('invalido','titulo'));
-    	// }
+   
     }
 }

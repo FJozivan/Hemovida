@@ -26,15 +26,23 @@
             </div>
         @endif --}}
         @if (count($errors) != 0)
-            @foreach ($errors->all() as $erro)
-                <div style="border-radius: 10px">
+            @foreach ($errors->all() as $erros)
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                  <strong>Sorry!</strong> {{ $erro }}
+                  <strong>Sorry!</strong> {{ $erros }}
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             @endforeach
+        @endif
+
+        @if (isset($erro2))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong>Desculpe!</strong> {{ $erro2 }}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         @endif
                 <form action="/logar" class="mt-3 mb-3 ml-5 mr-5" method="post">
                     {{ csrf_field() }}

@@ -175,7 +175,8 @@
 													<label for="tipo_sanguineo" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tipo sanguíneo:</label>
 													<div class="col-lg-10 col-sm-10">
 														<select class=" custom-select" name="tipo_sanguineo">
-															<option selected value="I">Não sei qual é meu sangue</option>
+															<option selected value="">Selecione...</option>
+															<option value="i">Não sei qual é meu sangue</option>
 															<option value="A+">A+</option>
 															<option value="A-">A-</option>
 															<option value="B+">B+</option>

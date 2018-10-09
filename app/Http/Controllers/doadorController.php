@@ -20,18 +20,18 @@ class doadorController extends Controller
         
             'nome' => 'required',
             'sobrenome' => 'required',
-            'cpf' => 'required',
+            'cpf' => 'required|unique:doadors,cpf',
             'data_nascimento' => 'required',
             'sexo' => 'required',
             'email' => 'required',
-            'senha_confirmada' => 'required',
+            'senha' => 'required',
             'cep' => 'required',
             'rua' => 'required',
             'bairro' => 'required',
             'tipo_sanguineo' => 'required',
             'cidade' => 'required',
-            'numero' => 'required'
-
+            'numero' => 'required',
+            'tipo_sanguineo' => 'required'
 
         ]);
 
