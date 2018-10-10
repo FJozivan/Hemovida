@@ -34,9 +34,9 @@
 										</div>
 
 										<div class="form-group row">
-											<label for="nome" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> N° inscrição</label>
+											<label for="numero_inscricao" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> N° inscrição</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="text" class="form-control" id="nome" name="nome">
+												<input type="text" class="form-control" id="numero_inscricao" name="numero_inscricao">
 											</div>
 										</div>
 
@@ -55,9 +55,9 @@
 										</div>
 
 										<div class="form-group row">
-											<label for="cpf" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> E-mail</label>
+											<label for="email" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> E-mail</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="text" class="form-control" id="cpf" name="cpf">
+												<input type="text" class="form-control" id="email" name="email">
 											</div>
 										</div>
 
