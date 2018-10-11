@@ -37,7 +37,7 @@
 			</ul>
 			<ul class="navbar-nav">
 				<li class="nav-item mr-3 my-lg-0">
-					<a class="btn btn-outline-info btn-sm" href="login">Login</a>
+					<a class="btn btn-outline-info btn-sm" href="login_doador">Login</a>
 				</li>
 				<li class="nav-item mr-3">
 					<a class="btn btn-outline-success btn-sm" href="cadastro_doador">Cadastro</a>

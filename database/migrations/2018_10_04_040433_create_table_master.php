@@ -17,7 +17,8 @@ class CreateTableMaster extends Migration
             
             //Minhas colunas
             $table->increments('id_master');
-            $table->String('login',45)->nullable($value = false);
+            $table->String('nome_master',45)->nullable($value = false);
+            $table->String('login',45)->unique()->nullable($value = false);
             $table->String('senha',100)->nullable($value = false);
 
             //colunas padrão laravel

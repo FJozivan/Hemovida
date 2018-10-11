@@ -17,10 +17,10 @@ class CreateTableFuncionario extends Migration
             
             //Minhas colunas
             $table->increments('id_funcionario');
-            $table->String('login',45)->nullable($value = false);
             $table->String('senha',100)->nullable($value = false);
             $table->integer('inscricao_hemoce')->unique()->nullable($value = false);
             $table->String('nome',45)->nullable($value = false);
+            $table->string('sexo',10)->nullable($value = false);
             $table->String('sobrenome',45);
             $table->String('email',45)->nullable($value = false);
 

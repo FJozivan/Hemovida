@@ -27,16 +27,35 @@
 					<div class="row">
 						<div class="container">
 							<div class="col-lg-12 mb-3">
-								<form method="" action="">
+								@if (isset($errors))
+									@if (count($errors) != 0)
+									<div class="alert alert-warning alert-dismissible fade show" role="alert">
+										<p>Campo(s) obrigatorio(s):</p>
+										<ul>
+										@foreach ($errors->all() as $erro)
+											 <strong> <li> {{ $erro }} </li> </strong>
+										@endforeach
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</ul>
+									</div>
+									@endif
+								@endif
+								
+								<form method="post" action="cadastrar_funcionario">
+
+									{{ csrf_field() }}
+
 									<div class="container font">
 										<div class="col-lg-12 col-sm-12">
 											<p style="margin-left: -25px;">IDENTIFICAÇÃO</p>
 										</div>
 
 										<div class="form-group row">
-											<label for="numero_inscricao" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> N° inscrição</label>
+											<label for="numero_de_inscricao" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> N° inscrição</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="text" class="form-control" id="numero_inscricao" name="numero_inscricao">
+												<input type="text" class="form-control" id="numero_de_inscricao" name="numero_de_inscricao">
 											</div>
 										</div>
 
@@ -48,7 +67,7 @@
 										</div>
 
 										<div class="form-group row">
-											<label for="sobrenome" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;">Sobrenome:</label>
+											<label for="sobrenome" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Sobrenome:</label>
 											<div class="col-lg-10 col-sm-10">
 												<input type="text" class="form-control" id="sobrenome" name="sobrenome">
 											</div>
@@ -62,14 +81,14 @@
 										</div>
 
 										<div class="row">
-											<label for="sexo" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;">Sexo:</label>
+											<label for="sexo" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Sexo:</label>
 											<div class="col-lg-9 col-sm-9" style="margin-top: 7px">
 												<div class="custom-control custom-radio custom-control-inline">
-													<input type="radio" id="masculino" name="sexo" class="custom-control-input">
+													<input type="radio" id="masculino" name="sexo" class="custom-control-input" value="m">
 													<label class="custom-control-label" for="masculino">Masculino</label>
 												</div>
 												<div class="custom-control custom-radio custom-control-inline">
-													<input type="radio" id="feminino" name="sexo" class="custom-control-input">
+													<input type="radio" id="feminino" name="sexo" class="custom-control-input" value="f">
 													<label class="custom-control-label" for="feminino">Feminino</label>
 												</div>
 											</div>
@@ -96,10 +115,10 @@
 
 										<div class="row text-center">
 											<div class="col-lg-6 col-sm-12 text-center mt-2 col-">
-												<button type="submit" id="cadastrar" class="btn btn-danger" style="font-weight: bold; font-size: 16px;">Cadastrar</button>
+												<button type="submit" id="cadastrar" class="btn btn-info" style="font-weight: bold; font-size: 16px;">Cadastrar</button>
 											</div>
 											<div class="col-lg-6 col-sm-10 mt-2 col-">
-												<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;">Cancelar</button>		
+												<a href="/" class="btn btn-secondary ml-2">Cancelar</a>	
 											</div>
 										</div>
 									</div>

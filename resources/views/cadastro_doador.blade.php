@@ -28,10 +28,10 @@
 							<div class="col-lg-12 mb-3">
 								@if (count($errors) != 0)
 									<div class="alert alert-warning alert-dismissible fade show" role="alert">
-										<p><strong>Os campos a seguir devem ser preenchidos:</strong></p>
+										<p>Campo(s) obrigatorio(s):</p>
 										<ul>
 										@foreach ($errors->all() as $erro)
-											{{-- <div style="border-radius: 10px"> --}}
+											<div style="border-radius: 10px">
 											 <li>{{ $erro }}</li>
 										@endforeach
 										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -79,11 +79,11 @@
 												<label for="sexo" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Sexo:</label>
 												<div class="col-lg-9 col-sm-9" style="margin-top: 7px">
 													<div class="custom-control custom-radio custom-control-inline">
-														<input type="radio" id="masculino" name="sexo" class="custom-control-input">
+														<input type="radio" id="masculino" name="sexo" class="custom-control-input" value="m">
 														<label class="custom-control-label" for="masculino">Masculino</label>
 													</div>
 													<div class="custom-control custom-radio custom-control-inline">
-														<input type="radio" id="feminino" name="sexo" class="custom-control-input">
+														<input type="radio" id="feminino" name="sexo" class="custom-control-input" value="f">
 														<label class="custom-control-label" for="feminino">Feminino</label>
 													</div>
 												</div>

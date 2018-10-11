@@ -30,7 +30,7 @@ class CreateTableDoador extends Migration
 
             $table->string('sobrenome',45);
 
-            $table->string('sexo',20)->nullable($value = false);
+            $table->string('sexo',10)->nullable($value = false);
 
             $table->string('cep',20);
 
@@ -51,6 +51,7 @@ class CreateTableDoador extends Migration
 
 
             //colunas padrão laravel
+            $table->rememberToken(); // -> Usado para usuarios que precisam de autentitação
             $table->timestamps();
         });
     }
