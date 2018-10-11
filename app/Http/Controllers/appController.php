@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Mail;
 
+use App\Mail\emailHemovida;
+
 class appController extends Controller
 {
     public function enviarEmail(){
