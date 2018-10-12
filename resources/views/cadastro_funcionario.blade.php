@@ -117,8 +117,9 @@
 											<div class="col-lg-6 col-sm-12 text-center mt-2 col-">
 												<button type="submit" id="cadastrar" class="btn btn-info" style="font-weight: bold; font-size: 16px;">Cadastrar</button>
 											</div>
+
 											<div class="col-lg-6 col-sm-10 mt-2 col-">
-												<a href="/" class="btn btn-secondary ml-2">Cancelar</a>	
+												<a href="ver_funcionarios" class="btn btn-secondary ml-2">Cancelar</a>	
 											</div>
 										</div>
 									</div>

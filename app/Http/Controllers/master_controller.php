@@ -102,7 +102,7 @@ class master_controller extends Controller
 
         $dados = funcionario::all();
         $nome = "FUNCIONARIOS";
-        $logado = $requisicao->logado;
+        $logado = "Master";
         return view('lista_cadastrados', compact('dados','nome','logado'));
     }   
 }
