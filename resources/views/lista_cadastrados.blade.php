@@ -4,9 +4,9 @@
 @stop
 @section('corpo')
 @if (isset($success))
-	<script type="text/javascript">
-		alert({{ $success }});
-	</script>
+<script type="text/javascript">
+	alert({{ $success }});
+</script>
 @endif
 <div class="container-fluid mb-5" style="background-color: #182E47; margin-top: 80px;">
 	<div class="row">
@@ -28,27 +28,34 @@
 					<div class="row">
 						<div class="container">
 							<div class="col-lg-12 mb-3">
-								<table class="table">
-									<thead>
-										<tr>
-											<th>Nome</th>
-											<th>Email</th>
-										</tr>
-									</thead>
-									<tbody>
-										@foreach ($dados as $dado)
-
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
 											<tr>
-												<td>{{ $dado->nome }}</td>
-												<td>{{ $dado->email }}</td>
+												{{-- <th>Selecionar</th> --}}
+												<th>Nome</th>
+												<th>Email</th>
 											</tr>
+										</thead>
+										<tbody>
+											
+												@foreach ($dados as $dado)
+												<tr>
+													{{-- <td>
+														<input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td> --}}
+														<td>{{ $dado->nome }}</td>
+													<td>{{ $dado->email }}</td>
+												</tr>
 
-										@endforeach
-										
-									</tbody>
-								</table>
+												@endforeach	
+											
+
+
+										</tbody>
+									</table>	
+								</div>
 								@if ($nome == "DOADORES")
-									<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
+								<button type="submit" class="btn btn-warning disabled" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
 								@endif
 								
 							</div>
