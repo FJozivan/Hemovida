@@ -40,19 +40,20 @@ class master_controller extends Controller
 
         }else if($dados_f != null && $dados_m == null){
 
-            if ($dados_f->senha== md5($requisicao->senha)) {
+            if ($dados_f->senha == md5($requisicao->senha)) {
                 $logado = $dados_f->nome;
-                return view('cadastro_funcionario', compact('titulo','logado'));
+                return view('inicio_apos_login_master', compact('titulo','logado'));
 
             }else{
                 $titulo = "Login";
                 $erro2 = 'A senha deste usuario não confere!';
                 return view('login_hemoce', compact('erro2','titulo'));
+                
             }
 
         }else if($dados_f == null && $dados_m != null){
 
-            if ($dados_m->senha== md5($requisicao->senha)) {
+            if ($dados_m->senha == md5($requisicao->senha)) {
                 $logado = $dados_m->nome_master;
                 return view('inicio_apos_login_master', compact('titulo','logado'));
 
@@ -68,7 +69,8 @@ class master_controller extends Controller
     // Cadastro de funcionarios
     public function Cadastro_funcionario() {
         $titulo = "Cadastro Funcionario";
-        return view('cadastro_funcionario', compact('titulo'));
+        $logado = "Master";
+        return view('cadastro_funcionario', compact('logado'));
     }
 
     public function Cadastrar_funcionario(Request $requisicao) {
@@ -90,9 +92,17 @@ class master_controller extends Controller
     	$funcionario->sobrenome = $requisicao->sobrenome;
     	$funcionario->sexo = $requisicao->sexo;
     	$funcionario->email = $requisicao->email;
-    	$funcionario->senha = md5($requisicao->senha_confirmada);
+    	$funcionario->senha = md5($requisicao->senha);
 
     	//dd($funcionario);
     	$funcionario->save(); 
     }
+
+    public function ver_funcionarios(Request $requisicao) {
+
+        $dados = funcionario::all();
+        $nome = "FUNCIONARIOS";
+        $logado = $requisicao->logado;
+        return view('lista_cadastrados', compact('dados','nome','logado'));
+    }   
 }

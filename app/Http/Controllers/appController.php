@@ -11,7 +11,9 @@ use App\Mail\emailHemovida;
 class appController extends Controller
 {
     public function enviarEmail(){
-        Mail::to('hemovidaifce@gmail.com')->send(new emailHemovida());
+
+        Mail::to('andra04@gmail.com')->send(new emailHemovida());
+        
         return 'OK';
     }
 }

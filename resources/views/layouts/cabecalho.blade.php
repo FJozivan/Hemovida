@@ -20,46 +20,63 @@
 	</button>
 	<!-- Links -->
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+
 		@if (isset($logado)==false)
-			<ul class="navbar-nav">
+			
 				<li class="nav-item">
-					<a class="nav-link my-lg-0" href="#">O Hemoce</a>
+					<a class="nav-link" href="#">O Hemoce</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link my-lg-0" href="#">Doador</a>
+					<a class="nav-link" href="#">Doador</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link my-lg-0" href="#">Benefícios</a>
+					<a class="nav-link" href="#">Benefícios</a>
 				</li>
 				<li class="nav-item mr-5">
-					<a class="nav-link my-lg-0" href="#">Sobre Nós</a>
+					<a class="nav-link" href="#">Sobre Nós</a>
 				</li>
-			</ul>
-			<ul class="navbar-nav">
-				<li class="nav-item mr-3 my-lg-0">
+			{{-- </ul>
+			<ul class="navbar-nav"> --}}
+				<li class="nav-item mr-3 my-lg-1">
 					<a class="btn btn-outline-info btn-sm" href="login_doador">Login</a>
 				</li>
-				<li class="nav-item mr-3">
+				<li class="nav-item mr-3 my-lg-1">
 					<a class="btn btn-outline-success btn-sm" href="cadastro_doador">Cadastro</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item my-lg-1">
 					<a class="btn btn-outline-light btn-sm" href="/">Doadores cadastrados</a>
 				</li>
-			</ul>
+			{{-- </ul> --}}
 		@else
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<div class="dropdown my-lg-0">
+			{{-- <ul class="navbar-nav"> --}}
+				<li class="nav-item my-lg-0 mr-3 mb-2">
+					<div class="dropdown">
 						<button type="button" class="btn btn-outline-info dropdown-toggle btn-sm" data-toggle="dropdown">
 							{{$logado}}
 						</button>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Link 1</a>
-							<a class="dropdown-item" href="#">Link 2</a>
-							<a class="dropdown-item" href="#">Link 3</a>
+							<a class="dropdown-item" href="/">Logout</a>
+							{{-- <a class="dropdown-item" href="#"></a> --}}
+							{{-- <a class="dropdown-item" href="#">Link 3</a> --}}
 						</div>
 					</div>
 				</li>
+				@if ($logado == "Master")
+					<li class="nav-item my-lg-0 mr-3">
+							{{-- <form method="post" action="cadastro_funcionario">
+								{{ csrf_field() }}
+								<button type="submit" class="btn btn-outline-danger btn-sm" value="{{ $logado }}" name="logado" >Cadastro funcionario</button>
+							</form> --}}
+							<a class="btn btn-outline-danger btn-sm" href="cadastro_funcionario">Cadastro funcionario</a
+					</li>
+					<li class="nav-item my-lg-0">
+							<form method="post" action="ver_funcionarios">
+								{{ csrf_field() }}
+								<button type="submit" class="btn btn-outline-warning btn-sm" value="{{ $logado }}" name="logado" >Funcionários cadastrados</button>
+							</form>
+					</li>
+				@endif
 			</ul>
 		@endif
 		

@@ -3,6 +3,11 @@
 @extends('layouts.cabecalho')
 @stop
 @section('corpo')
+@if (isset($success))
+	<script type="text/javascript">
+		alert({{ $success }});
+	</script>
+@endif
 <div class="container-fluid mb-5" style="background-color: #182E47; margin-top: 80px;">
 	<div class="row">
 		<div class="col-lg-12 col-sm-12 col-">
@@ -12,7 +17,7 @@
 						<div class="col-xl-12">
 							<center>
 								<h5 style="margin-top: 20px; font-family: 'Raleway', sans-serif; color: red;">
-									DOADORES CADASTRADOS
+									{{ $nome }} CADASTRADOS
 								</h5>
 								<hr style="background-color: red; margin-top: 5px">
 							</center>
@@ -42,7 +47,10 @@
 										
 									</tbody>
 								</table>
-								<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
+								@if ($nome == "DOADORES")
+									<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
+								@endif
+								
 							</div>
 						</div>
 					</div>

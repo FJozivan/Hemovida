@@ -62,9 +62,9 @@
         </div>
         <div class="text-center mt-2">
                
-                <a href="login_doador" class="btn btn-success btn-sm mr-4"><img class="" style="width: 20px" src="./img/power.svg"> Doador</a>
+                <a href="login_doador" class="btn btn-success btn-sm mr-2"><img class="" style="width: 20px" src="./img/power.svg"> Doador</a>
 
-                <a href="#" class="btn btn-light disabled btn-sm ml-4"><img class="" style="width: 20px" src="./img/power.svg"> Hemoce</a>
+                <a href="#" class="btn btn-light disabled btn-sm ml-2"><img class="" style="width: 20px" src="./img/power.svg"> Hemoce</a>
         </div>
         <div class="mt-4 text-center">
             <button type="submit" class="btn btn-info btn-lg mr-2">Entrar</button>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use App\doador;
 
 class doadorController extends Controller
@@ -54,11 +55,14 @@ class doadorController extends Controller
 
     	//dd($doador);
     	$doador->save(); 
+        //return ('cadastrado com sucesso!, volte a página.');
+        return redirect('/')->with('success','Cadastro realizado com sucesso!.');
     }
 
 	public function ver_doadores() {
 
         $dados = doador::all();
-        return view('doadores_cadastrados', compact('dados'));
+        $nome = "DOADORES";
+        return view('lista_cadastrados', compact('dados','nome'));
     }    
 }

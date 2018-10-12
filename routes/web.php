@@ -29,6 +29,10 @@ Route::post('logar_hemoce', 'master_controller@logar');
 // Cadastro de funcionarios
 Route::get('cadastro_funcionario', 'master_controller@Cadastro_funcionario');
 Route::post('cadastrar_funcionario', 'master_controller@Cadastrar_funcionario');
+
+// Ver funcionarios cadastrados
+Route::post('ver_funcionarios', 'master_controller@ver_funcionarios');
+
 // Envio de emails
 Route::get('enviar_mail', 'appController@enviarEmail');
 

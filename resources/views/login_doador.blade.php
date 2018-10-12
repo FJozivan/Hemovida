@@ -62,9 +62,9 @@
         </div>
         <div class="text-center mt-2">
                
-                <a href="#" class="btn btn-light btn-sm disabled mr-4"><img class="" style="width: 20px" src="./img/power.svg"> Doador</a>
+                <a href="#" class="btn btn-light btn-sm disabled mr-2"><img class="" style="width: 20px" src="./img/power.svg"> Doador</a>
 
-                <a href="login_hemoce" class="btn btn-success btn-sm ml-4"><img class="" style="width: 20px" src="./img/power.svg"> Hemoce</a>
+                <a href="login_hemoce" class="btn btn-success btn-sm ml-2"><img class="" style="width: 20px" src="./img/power.svg"> Hemoce</a>
         </div>
 
         <div class="mt-4 text-center">

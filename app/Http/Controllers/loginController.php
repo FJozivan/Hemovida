@@ -40,7 +40,7 @@ class loginController extends Controller
             if ($dados->senha== md5($requisicao->senha)) {
                 $logado = $dados->nome;
                 //return view('', compact('titulo','logado'));
-                return ('Login Realizado com sucesso');
+                return view('inicio_apos_login_doador',compact('logado'));
 
             }else{
                 $titulo = "Login";
