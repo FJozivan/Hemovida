@@ -1,5 +1,8 @@
 <?php
 
+// Dados da variavel de ambiente no Heroku;
+$DATABASE_URL = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
 return [
 
     /*
@@ -41,11 +44,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'us-cdbr-iron-east-01.cleardb.net'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'heroku_09042ad9f61720e'),
-            'username' => env('DB_USERNAME', 'b52545c7114bee'),
-            'password' => env('DB_PASSWORD', 'be4e22fb'),
+            'host' => env('DB_HOST', $DATABASE_URL["host"]),
+            'port' => env('DB_PORT', $DATABASE_URL["port"]),
+            'database' => env('DB_DATABASE', ltrim($DATABASE_URL["path"], "/")),
+            'username' => env('DB_USERNAME', $DATABASE_URL["user"]),
+            'password' => env('DB_PASSWORD', $DATABASE_URL["pass"]),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
