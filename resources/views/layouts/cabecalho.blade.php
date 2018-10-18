@@ -25,7 +25,7 @@
 		@if (isset($logado)==false)
 			
 				<li class="nav-item">
-					<a class="nav-link" href="#">O Hemoce</a>
+					<a class="nav-link" href="/hemoce">O Hemoce</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Doador</a>
@@ -68,14 +68,14 @@
 								{{ csrf_field() }}
 								<button type="submit" class="btn btn-outline-danger btn-sm" value="{{ $logado }}" name="logado" >Cadastro funcionario</button>
 							</form> --}}
-							<a class="btn btn-outline-danger btn-sm" href="cadastro_funcionario">Cadastro funcionario</a
+							<a class="btn btn-outline-danger btn-sm" href="cadastro_funcionario">Cadastro funcionario</a>
 					</li>
 					<li class="nav-item my-lg-0">
 							{{-- <form method="post" action="ver_funcionarios">
 								{{ csrf_field() }}
 								<button type="submit" class="btn btn-outline-warning btn-sm" value="{{ $logado }}" name="logado" >Funcionários cadastrados</button>
 							</form> --}}
-							<a class="btn btn-outline-warning btn-sm" href="ver_funcionarios">Funcionários cadastrados</a
+							<a class="btn btn-outline-warning btn-sm" href="ver_funcionarios">Funcionários cadastrados</a>
 					</li>
 				@endif
 			</ul>

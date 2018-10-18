@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/hemoce', 'homeController@Home');
+
 Route::get('/', 'doadorController@ver_doadores');
 
 // Login doador
