@@ -16,15 +16,6 @@
 
                 <center><img class=" mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; border-radius: 50px; margin-top: -40px; box-shadow: 0px 0px 1px" /></center>
 
-        {{-- @if (isset($invalido))
-            <div style="border-radius: 10px">
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                  <strong>Desculpe!</strong> Seus dados não conferem.
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            @endif --}}
             @if (count($errors) != 0)
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
               <p> Campo(s) não preenchido(s):</p>
@@ -54,7 +45,7 @@
 
         <div class="form-group">
             <label for="numero_inscricao">N° inscrição:</label>
-            <input type="text" class="form-control" id="numero_inscricao" maxlength="14" name="numero_inscricao">
+            <input type="text" class="form-control" id="numero_inscricao" maxlength="14" name="numero_inscricao" value="{{ old('numero_inscricao')}}">
         </div>
         <div class="form-group">
             <label for="senha">Senha:</label>

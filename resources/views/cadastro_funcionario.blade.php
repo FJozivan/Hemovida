@@ -27,25 +27,31 @@
 					<div class="row">
 						<div class="container">
 							<div class="col-lg-12 mb-3">
-								@if (isset($errors))
-									@if (count($errors) != 0)
-									<div class="alert alert-warning alert-dismissible fade show" role="alert">
-										<p>Campo(s) obrigatorio(s):</p>
-										<ul>
+								@if ($errors->has('sexo'))
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $errors->first('sexo') }}</strong>
+									</span>
+								@endif
+								{{-- @if (isset($errors))
+								@if (count($errors) != 0)
+								<div class="alert alert-warning alert-dismissible fade show" role="alert">
+									<p>Campo(s) obrigatorio(s):</p>
+									<ul>
 										@foreach ($errors->all() as $erro)
-											 <strong> <li> {{ $erro }} </li> </strong>
+										<strong> <li> {{ $erro }} </li> </strong>
 										@endforeach
 										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</ul>
-									</div>
-									@endif
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</ul>
+								</div>
 								@endif
+								@endif --}}
 								
 								<form method="post" action="cadastrar_funcionario">
 
-									{{ csrf_field() }}
+									{{-- {{ csrf_field() }} --}}
+									@csrf
 
 									<div class="container font">
 										<div class="col-lg-12 col-sm-12">
@@ -55,28 +61,53 @@
 										<div class="form-group row">
 											<label for="numero_de_inscricao" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> N° inscrição</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="text" class="form-control" id="numero_de_inscricao" name="numero_de_inscricao">
+												<input type="text" class="form-control {{ $errors->has('numero_de_inscricao') ? ' is-invalid' : '' }}" id="numero_de_inscricao" name="numero_de_inscricao" value="{{ old('numero_de_inscricao') }}">
+
+
+												@if ($errors->has('numero_de_inscricao'))
+												<span class="invalid-feedback" role="alert">
+													<strong>{{ $errors->first('numero_de_inscricao') }}</strong>
+												</span>
+												@endif
 											</div>
 										</div>
 
 										<div class="form-group row">
 											<label for="nome" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Nome:</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="text" class="form-control" id="nome" name="nome">
+												<input type="text" class="form-control {{ $errors->has('nome') ? ' is-invalid' : '' }}" id="nome" name="nome" value="{{ old('nome') }}">
+
+												@if ($errors->has('nome'))
+												<span class="invalid-feedback" role="alert">
+													<strong>{{ $errors->first('nome') }}</strong>
+												</span>
+												@endif
 											</div>
 										</div>
 
 										<div class="form-group row">
 											<label for="sobrenome" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Sobrenome:</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="text" class="form-control" id="sobrenome" name="sobrenome">
+												<input type="text" class="form-control {{ $errors->has('sobrenome') ? ' is-invalid' : '' }}" id="sobrenome" name="sobrenome" value="{{ old('sobrenome') }}">
+
+												@if ($errors->has('sobrenome'))
+												<span class="invalid-feedback" role="alert">
+													<strong>{{ $errors->first('sobrenome') }}</strong>
+												</span>
+												@endif
 											</div>
 										</div>
 
 										<div class="form-group row">
 											<label for="email" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> E-mail</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="text" class="form-control" id="email" name="email">
+												<input type="text" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" name="email" value="{{ old('email') }}">
+
+												@if ($errors->has('email'))
+												<span class="invalid-feedback" role="alert">
+													<strong>{{ $errors->first('email') }}</strong>
+												</span>
+												@endif
 											</div>
 										</div>
 
@@ -91,13 +122,22 @@
 													<input type="radio" id="feminino" name="sexo" class="custom-control-input" value="f">
 													<label class="custom-control-label" for="feminino">Feminino</label>
 												</div>
+
+
 											</div>
+											
 										</div>
 
 										<div class="form-group row">
 											<label for="senha" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Senha:</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="password" class="form-control" id="senha" name="senha">
+												<input type="password" class="form-control {{ $errors->has('senha') ? ' is-invalid' : '' }}" id="senha" name="senha">
+
+												@if ($errors->has('senha'))
+												<span class="invalid-feedback" role="alert">
+													<strong>{{ $errors->first('senha') }}</strong>
+												</span>
+												@endif
 											</div>
 										</div>
 

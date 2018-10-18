@@ -26,20 +26,21 @@
 					<div class="row">
 						<div class="container">
 							<div class="col-lg-12 mb-3">
-								@if (count($errors) != 0)
-									<div class="alert alert-warning alert-dismissible fade show" role="alert">
-										<p>Campo(s) obrigatorio(s):</p>
-										<ul>
+								
+								{{-- @if (count($errors) != 0)
+								<div class="alert alert-warning alert-dismissible fade show" role="alert">
+									<p>Campo(s) obrigatorio(s):</p>
+									<ul>
 										@foreach ($errors->all() as $erro)
-											<div style="border-radius: 10px">
-											 <li>{{ $erro }}</li>
-										@endforeach
-										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<div style="border-radius: 10px">
+											<li>{{ $erro }}</li>
+											@endforeach
+											<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</ul>
 									</div>
-									@endif
+									@endif --}}
 									<form method="POST" action="cadastrar_doador">
 										{{ csrf_field() }}
 										<div class="container font">
@@ -49,29 +50,54 @@
 
 											<div class="form-group row">
 												<label for="nome" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Nome:</label>
+
 												<div class="col-lg-10 col-sm-10">
-													<input type="text" class="form-control" id="nome" name="nome">
+													<input type="text" class="form-control {{ $errors->has('nome') ? ' is-invalid' : '' }}" id="nome" name="nome" value="{{ old('nome') }}">
+
+													@if ($errors->has('nome'))
+													<span class="invalid-feedback" role="alert">
+														<strong>{{ $errors->first('nome') }}</strong>
+													</span>
+													@endif
 												</div>
 											</div>
 
 											<div class="form-group row">
 												<label for="sobrenome" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Sobrenome:</label>
 												<div class="col-lg-10 col-sm-10">
-													<input type="text" class="form-control" id="sobrenome" name="sobrenome">
+													<input type="text" class="form-control {{ $errors->has('sobrenome') ? ' is-invalid' : '' }}" id="sobrenome" name="sobrenome" value="{{ old('sobrenome') }}">
+
+													@if ($errors->has('sobrenome'))
+													<span class="invalid-feedback" role="alert">
+														<strong>{{ $errors->first('sobrenome') }}</strong>
+													</span>
+													@endif
 												</div>
 											</div>
 
 											<div class="form-group row">
 												<label for="cpf" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> CPF:</label>
 												<div class="col-lg-10 col-sm-10">
-													<input type="text" class="form-control" id="cpf" name="cpf">
+													<input type="text" class="form-control {{ $errors->has('cpf') ? ' is-invalid' : '' }}" id="cpf" name="cpf" value="{{ old('cpf') }}">
+
+													@if ($errors->has('cpf'))
+													<span class="invalid-feedback" role="alert">
+														<strong>{{ $errors->first('cpf') }}</strong>
+													</span>
+													@endif
 												</div>
 											</div>
 
 											<div class="form-group row">
 												<label for="data_nascimento" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Data de Nascimento:</label>
 												<div class="col-lg-10 col-sm-10">
-													<input type="date" class="form-control" id="data_nascimento" name="data_nascimento">
+													<input type="date" class="form-control {{ $errors->has('data_nascimento') ? ' is-invalid' : '' }}" id="data_nascimento" name="data_nascimento" value="{{ old('data_nascimento') }}">
+
+													@if ($errors->has('data_nascimento'))
+													<span class="invalid-feedback" role="alert">
+														<strong>{{ $errors->first('data_nascimento') }}</strong>
+													</span>
+													@endif
 												</div>
 											</div>
 
@@ -93,7 +119,13 @@
 											<div class="form-group row">
 												<label for="email" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> E-mail:</label>
 												<div class="col-lg-10 col-sm-10">
-													<input type="email" class="form-control" id="email" name="email">
+													<input type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" name="email" value="{{ old('email') }}">
+
+													@if ($errors->has('email'))
+													<span class="invalid-feedback" role="alert">
+														<strong>{{ $errors->first('email') }}</strong>
+													</span>
+													@endif
 												</div>
 											</div>
 
@@ -107,7 +139,13 @@
 											<div class="form-group row">
 												<label for="senha" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Senha:</label>
 												<div class="col-lg-10 col-sm-10">
-													<input type="password" class="form-control" id="senha" name="senha">
+													<input type="password" class="form-control {{ $errors->has('senha') ? ' is-invalid' : '' }}" id="senha" name="senha" value="{{ old('senha') }}">
+
+													@if ($errors->has('senha'))
+													<span class="invalid-feedback" role="alert">
+														<strong>{{ $errors->first('senha') }}</strong>
+													</span>
+													@endif
 												</div>
 											</div>
 
@@ -130,7 +168,13 @@
 											<div class="form-group row">
 												<label for="cep" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> CEP:</label>
 												<div class="col-lg-10 col-sm-10">
-													<input type="text" class="form-control" id="cep" name="cep" maxlength="9">
+													<input type="text" class="form-control {{ $errors->has('cep') ? ' is-invalid' : '' }}" id="cep" name="cep" maxlength="9" value="{{ old('cep') }}">
+
+													@if ($errors->has('cep'))
+													<span class="invalid-feedback" role="alert">
+														<strong>{{ $errors->first('cep') }}</strong>
+													</span>
+													@endif
 												</div>
 											</div>
 
@@ -138,13 +182,25 @@
 												<label for="rua" class="col-lg-2 col-sm-12 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Rua:</label>
 												<!-- <div class="col-sm-7 form-group row"> -->
 													<div class="col-lg-6 col-sm-12">
-														<input type="text" class="form-control" id="rua" name="rua">
+														<input type="text" class="form-control {{ $errors->has('rua') ? ' is-invalid' : '' }}" id="rua" name="rua" value="{{ old('rua') }}">
+
+														@if ($errors->has('rua'))
+														<span class="invalid-feedback" role="alert">
+															<strong>{{ $errors->first('rua') }}</strong>
+														</span>
+														@endif
 													</div>
 													<!-- </div> -->
 													<div class="row">
 														<label for="numero" class="col-lg-3 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span>Nº:</label>
 														<div class="col-lg-4 col-sm-4">
-															<input type="text" class="form-control" id="numero" name="numero">
+															<input type="text" class="form-control {{ $errors->has('numero') ? ' is-invalid' : '' }}" id="numero" name="numero" value="{{ old('numero') }}">
+
+															@if ($errors->has('numero'))
+															<span class="invalid-feedback" role="alert">
+																<strong>{{ $errors->first('numero') }}</strong>
+															</span>
+															@endif
 														</div>
 													</div>
 												</div>
@@ -153,13 +209,25 @@
 													<label for="bairro" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Bairro:</label>
 													<div class="col-sm-4 form-group row">
 														<div class="col-lg-10 col-sm-10">
-															<input type="text" class="form-control" id="bairro" name="bairro">
+															<input type="text" class="form-control {{ $errors->has('bairro') ? ' is-invalid' : '' }}" id="bairro" name="bairro" value="{{ old('bairro')}}">
+
+															@if ($errors->has('bairro'))
+															<span class="invalid-feedback" role="alert">
+																<strong>{{ $errors->first('bairro') }}</strong>
+															</span>
+															@endif
 														</div>
 													</div>
 													<div class="col-sm-6 form-group row">
 														<label for="cidade" class="col-lg-3 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Cidade:</label>
 														<div class="col-lg-9 col-sm-10">
-															<input type="text" class="form-control" id="cidade" name="cidade">
+															<input type="text" class="form-control {{ $errors->has('cidade') ? ' is-invalid' : '' }}" id="cidade" name="cidade" value="{{ old('cidade')}}">
+
+															@if ($errors->has('cidade'))
+															<span class="invalid-feedback" role="alert">
+																<strong>{{ $errors->first('cidade') }}</strong>
+															</span>
+															@endif
 														</div>
 													</div>
 												</div>
@@ -174,7 +242,7 @@
 												<div class="row">
 													<label for="tipo_sanguineo" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tipo sanguíneo:</label>
 													<div class="col-lg-10 col-sm-10">
-														<select class=" custom-select" name="tipo_sanguineo">
+														<select class=" custom-select {{ $errors->has('tipo_sanguineo') ? ' is-invalid' : '' }}" name="tipo_sanguineo">
 															<option selected value="">Selecione...</option>
 															<option value="i">Não sei qual é meu sangue</option>
 															<option value="A+">A+</option>
@@ -186,6 +254,11 @@
 															<option value="O+">O+</option>
 															<option value="O-">O-</option>
 														</select>
+														@if ($errors->has('tipo_sanguineo'))
+														<span class="invalid-feedback" role="alert">
+															<strong>{{ $errors->first('tipo_sanguineo') }}</strong>
+														</span>
+														@endif
 														<p class="mt-2">Os campos com <span class="obrigatorio " style="font-size: 20px;">*</span> são de preenchimento obrigatório</p>
 													</div>
 												</div>

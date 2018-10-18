@@ -54,7 +54,7 @@
 
         <div class="form-group">
             <label for="cpf">CPF:</label>
-            <input type="text" class="form-control" id="cpf" maxlength="14" name="cpf">
+            <input type="text" class="form-control" id="cpf" maxlength="14" name="cpf" value="{{old('cpf')}}">
         </div>
         <div class="form-group">
             <label for="pwd">Senha:</label>
