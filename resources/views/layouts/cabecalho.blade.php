@@ -34,7 +34,7 @@
 					<a class="nav-link" href="#">Benefícios</a>
 				</li>
 				<li class="nav-item mr-5">
-					<a class="nav-link" href="#">Sobre Nós</a>
+					<a class="nav-link" href="/sobre">Sobre Nós</a>
 				</li>
 			{{-- </ul>
 			<ul class="navbar-nav"> --}}

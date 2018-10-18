@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/hemoce', 'homeController@Home');
-
 Route::get('/', 'doadorController@ver_doadores');
+
+// Links do Menu
+Route::get('/hemoce', 'homeController@Home');
+Route::get('/sobre', 'homeController@Sobre');
 
 // Login doador
 Route::get('login_doador', 'loginController@FazerLogin');
