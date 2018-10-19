@@ -18,6 +18,8 @@ class master_controller extends Controller
 
     public function logar(Request $requisicao) {
 
+        // Apaga dados da sessão;
+        $requisicao->session()->forget('user');
 
         // Verificação dos entradas
 
@@ -41,7 +43,12 @@ class master_controller extends Controller
         }else if($dados_f != null && $dados_m == null){
 
             if ($dados_f->senha == md5($requisicao->senha)) {
+
+                //Session
+                $requisicao->session()->push('user', $dados_f);
+
                 $logado = $dados_f->nome;
+
                 return view('inicio_apos_login_master', compact('titulo','logado'));
 
             }else{
@@ -54,6 +61,10 @@ class master_controller extends Controller
         }else if($dados_f == null && $dados_m != null){
 
             if ($dados_m->senha == md5($requisicao->senha)) {
+
+                //Session
+                $requisicao->session()->push('user', $dados_m);
+
                 $logado = $dados_m->nome_master;
                 return view('inicio_apos_login_master', compact('titulo','logado'));
 
@@ -66,6 +77,13 @@ class master_controller extends Controller
    
     }
 
+    public function logout(Request $requisicao) {
+
+        // Apaga dados da sessão;
+        $requisicao->session()->forget('user');
+        return redirect('login_hemoce');
+        //return "Deslogado";
+    }
     // Cadastro de funcionarios
     public function Cadastro_funcionario() {
         $titulo = "Cadastro Funcionario";
@@ -104,5 +122,5 @@ class master_controller extends Controller
         $nome = "FUNCIONARIOS";
         $logado = "Master";
         return view('lista_cadastrados', compact('dados','nome','logado'));
-    }   
+    }
 }

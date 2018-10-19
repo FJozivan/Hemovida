@@ -16,8 +16,10 @@ class loginController extends Controller
 
     public function logar(Request $requisicao) {
 
+        // Apaga dados da sessão;
+        $requisicao->session()->forget('user');
 
-        // Verificação dos inputa
+        // Verificação dos input
 
         $this->validate($requisicao,[
         
@@ -37,10 +39,21 @@ class loginController extends Controller
 
         }else{
 
-            if ($dados->senha== md5($requisicao->senha)) {
-                $logado = $dados->nome;
+            if ($dados->senha == md5($requisicao->senha)) {
+                
+
+                //$logado = $dados->nome;
+
+                //Session
+                $requisicao->session()->push('user', $dados);
+
                 //return view('', compact('titulo','logado'));
-                return view('inicio_apos_login_doador',compact('logado'));
+                //return view('inicio_apos_login_doador', compact('dados'));
+
+                // recuperar dados da session:
+                // $user = session->get('user')[0];
+                return view('inicio_apos_login_doador', compact('titulo','logado'));
+
 
             }else{
                 $titulo = "Login";

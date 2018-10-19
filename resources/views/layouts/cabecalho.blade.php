@@ -56,7 +56,7 @@
 							{{$logado}}
 						</button>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="/">Logout</a>
+							<a class="dropdown-item" href="logout">Logout</a>
 							{{-- <a class="dropdown-item" href="#"></a> --}}
 							{{-- <a class="dropdown-item" href="#">Link 3</a> --}}
 						</div>
