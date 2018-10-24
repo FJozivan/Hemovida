@@ -59,6 +59,11 @@ class doadorController extends Controller
         return redirect('/')->with('success','Cadastro realizado com sucesso!.');
     }
 
+    public function Questionario() {
+        $titulo = "Questionário do doador";
+        return view('questionario', compact('titulo'));
+    }
+
 	public function ver_doadores() {
 
         $dados = doador::all();

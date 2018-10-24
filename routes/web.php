@@ -25,6 +25,9 @@ Route::post('logar_doador', 'loginController@logar');//->middleware('login_doado
 Route::get('cadastro_doador', 'doadorController@CadastroDoador');
 Route::post('cadastrar_doador', 'doadorController@CadastrarDoador');
 
+// Questionário doador
+Route::get('questionario', 'doadorController@Questionario');
+
 // Login funcionario
 Route::get('login_hemoce', 'master_controller@FazerLogin');
 Route::post('logar_hemoce', 'master_controller@logar');
