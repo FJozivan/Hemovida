@@ -259,6 +259,15 @@
                                         </div>
 
                                     </div>
+
+                                    <div class="row text-center">
+                                        <div class="col-lg-6 col-sm-12 text-center mt-4 col-">
+                                            <button id="enviar" type="submit" class="btn btn-info" style="font-weight: bold; font-size: 16px;">Enviar</button>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-10 mt-4 col-">
+                                            <button type="button" class="btn btn-secondary" style="font-weight: bold; font-size: 16px;">Cancelar</button>		
+                                        </div>
+                                    </div>
                                 </form>			
                             </div>
                         </div>
