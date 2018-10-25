@@ -78,6 +78,36 @@
 
                                         <div class="row">
                                             <div class="row col-md-6">
+                                                <label for="amamentando" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;">(Sexo feminino) Está amamentando?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="amamentandosim" name="amamentando" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="amamentandosim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="amamentandonao" name="amamentando" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="amamentandonao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row col-md-6">
+                                                <label for="parto" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;">(Sexo feminino) O parto ocorreu há mais de 12 meses?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="partosim" name="parto" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="partosim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="partonao" name="parto" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="partonao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="row col-md-6">
                                                 <label for="hiv" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tem ou teve um teste positivo para HIV?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
@@ -108,6 +138,50 @@
 
                                         <div class="row">
                                             <div class="row col-md-6">
+                                                <label for="malaria" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Já teve malária?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="malariasim" name="malaria" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="malariasim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="malarianao" name="malaria" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="malarianao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row col-md-6">
+                                                <label for="chagas" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tem doença de chagas?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="chagassim" name="chagas" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="chagassim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="chagasnao" name="chagas" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="chagasnao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="row col-md-6">
+                                                <label for="duramater" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Recebeu enxerto de duramater?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="duramatersim" name="duramater" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="duramatersim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="duramaternao" name="duramater" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="duramaternao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row col-md-6">
                                                 <label for="cancer" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Teve algum tipo de câncer, incluindo leucemia?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
@@ -120,7 +194,9 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
 
+                                        <div class="row">
                                             <div class="row col-md-6">
                                                 <label for="problemas" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tem graves problemas no pulmão, coração, rins ou fígado?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
@@ -134,9 +210,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="row">
                                             <div class="row col-md-6">
                                                 <label for="coagulacao" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tem problema de coagulação de sangue?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
@@ -150,7 +224,9 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
 
+                                        <div class="row">
                                             <div class="row col-md-6">
                                                 <label for="diabetes" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> É diabético com complicações vasculares ou em uso de insulina?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
@@ -161,6 +237,126 @@
                                                     <div class="custom-control custom-radio custom-control-inline">
                                                         <input type="radio" id="diabetesnao" name="diabetes" class="custom-control-input" value="false">
                                                         <label class="custom-control-label" for="diabetesnao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row col-md-6">
+                                                <label for="tuberculose" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Teve tuberculose extra-pulmonar?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="tuberculosesim" name="tuberculose" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="tuberculosesim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="tuberculosenao" name="tuberculose" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="tuberculosenao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="row col-md-6">
+                                                <label for="elefantiase" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Já teve elefantíase?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="elefantiasesim" name="elefantiase" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="elefantiasesim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="elefantiasenao" name="elefantiase" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="elefantiasenao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row col-md-6">
+                                                <label for="hanseniase" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> já teve hanseníase?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="hanseniasesim" name="hanseniase" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="hanseniasesim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="hanseniasenao" name="hanseniase" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="hanseniasenao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="row col-md-6">
+                                                <label for="calazar" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Já teve calazar (leishmaniose visceral)?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="calazarsim" name="calazar" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="calazarsim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="calazarnao" name="calazar" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="calazarnao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row col-md-6">
+                                                <label for="brucelose" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Já teve brucelose?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="brucelosesim" name="brucelose" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="brucelosesim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="brucelosenao" name="brucelose" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="brucelosenao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="row col-md-6">
+                                                <label for="esquistossomose" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Já teve esquistossomose hepatoesplênica?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="esquistossomosesim" name="esquistossomose" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="esquistossomosesim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="esquistossomosenao" name="esquistossomose" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="esquistossomosenao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row col-md-6">
+                                                <label for="inimputabilidade" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tem alguma doença que gere inimputabilidade jurídica?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="inimputabilidadesim" name="inimputabilidade" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="inimputabilidadesim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="inimputabilidadenao" name="inimputabilidade" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="inimputabilidadenao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="row col-md-6">
+                                                <label for="transplante" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Foi submetido a transplante de órgãos ou de medula?</label>
+                                                <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="transplantesim" name="transplante" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="transplantesim">Sim</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="transplantenao" name="transplante" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="transplantenao">Não</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -183,54 +379,90 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="sintomas" class="col-sm-12 col-form-label" style="text-align: left;">Nos últimos 7 dias você sentiu algum desses sintomas?</label>
-                                            <div class="form-check form-check-inline col-sm">
+                                            <label for="sintomas" class="col-sm-12 col-form-label" style="text-align: left;">Nos últimos 7 dias você sentiu algum dessas doenças?</label>
+                                            <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="diarreia">
                                                 <label class="form-check-label" for="inlineCheckbox1">Diarréia</label>
                                             </div>
-                                            <div class="form-check form-check-inline col-sm">
+                                            <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="resfriado">
                                                 <label class="form-check-label" for="inlineCheckbox2">Gripe ou resfriado</label>
                                             </div>
-                                            <div class="form-check form-check-inline col-sm">
+                                            <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="conjuntivite">
                                                 <label class="form-check-label" for="inlineCheckbox3">Conjuntivite</label>
                                             </div>
-                                            <div class="form-check form-check-inline col-sm">
+                                            <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="extracao_dentaria">
-                                                <label class="form-check-label" for="inlineCheckbox4">Extração dentária</label>
+                                                <label class="form-check-label" for="inlineCheckbox4">Extração dentária (verificar uso de medicação)</label>
                                             </div>
-                                            <div class="form-check form-check-inline col-sm">
+                                            <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="canal">
-                                                <label class="form-check-label" for="inlineCheckbox5">Tratamento de canal</label>
+                                                <label class="form-check-label" for="inlineCheckbox5">Tratamento de canal (verificar medicação)</label>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="sintomas" class="col-sm-12 col-form-label" style="text-align: left;">Nas últimas duas semanas você sentiu alguma dessas doenças?</label>
+                                            <label for="sintomas" class="col-sm-12 col-form-label" style="text-align: left;">Nas últimas duas semanas você teve alguma dessas doenças?</label>
                                             <div class="form-check form-check-inline col-sm">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="infeccao_bacteriana">
-                                                <label class="form-check-label" for="inlineCheckbox8">Após o término do tratamento de infecções bacterianas (uso de antibióticos)</label>
+                                                <label class="form-check-label" for="inlineCheckbox8">Tratamento de infecções bacterianas (uso de antibióticos)</label>
                                             </div>
                                             <div class="form-check form-check-inline col-sm">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="rubeola">
-                                                <label class="form-check-label" for="inlineCheckbox9">Após a cura de rubéola</label>
+                                                <label class="form-check-label" for="inlineCheckbox9">Rubéola</label>
                                             </div>
                                             <div class="form-check form-check-inline col-sm">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="erisipela">
-                                                <label class="form-check-label" for="inlineCheckbox10">Após a cura de erisipela</label>
+                                                <label class="form-check-label" for="inlineCheckbox10">Erisipela</label>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="sintomas2" class="col-sm-12 col-form-label" style="text-align: left;">Nas últimas três semanas você sentiu alguma dessas doenças?</label>
+                                            <label for="sintomas2" class="col-sm-12 col-form-label" style="text-align: left;">Nas últimas três semanas você teve alguma dessas doenças?</label>
                                             <div class="form-check form-check-inline col-sm">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="caxumba">
-                                                <label class="form-check-label" for="inlineCheckbox6">Após a cura de caxumba</label>
+                                                <label class="form-check-label" for="inlineCheckbox6">Caxumba</label>
                                             </div>
                                             <div class="form-check form-check-inline col-sm">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="catapora">
-                                                <label class="form-check-label" for="inlineCheckbox7">Após a cura de varicela (catapora)</label>
+                                                <label class="form-check-label" for="inlineCheckbox7">Varicela (catapora)</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="sintomas3" class="col-sm-12 col-form-label" style="text-align: left;">Nas últimas quatro semanas você passou por algum desses procedimentos ou teve alguma dessas doenças?</label>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox16" value="vacina_virus_bacteria">
+                                                <label class="form-check-label" for="inlineCheckbox16">Se recebeu vacina de vírus ou bactérias vivos e atenuados. Ex.: poliomielite oral (sabin), febre tifóide oral, caxumba, febre amarela, sarampo, bcg, rubéola, catapora, varíola etc.</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox17" value="soro_antitetanico">
+                                                <label class="form-check-label" for="inlineCheckbox17">Se recebeu soro antitetânico</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox18" value="dengue">
+                                                <label class="form-check-label" for="inlineCheckbox18">Dengue</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox19" value="cirurgia_odontologica">
+                                                <label class="form-check-label" for="inlineCheckbox19">Cirurgia odontológica com anestesia geral</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox20" value="febre_amarela">
+                                                <label class="form-check-label" for="inlineCheckbox20">Após o retorno, quem esteve em região onde há surto de Febre Amarela</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="aborto" class="col-sm-12 col-form-label" style="text-align: left;">Nas últimas 12 semanas (somente para mulheres) passou por algum desses procedimentos?</label>
+                                            <div class="form-check form-check-inline col-sm">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox21" value="aferese">
+                                                <label class="form-check-label" for="inlineCheckbox21">Se houve doação dupla de hemácias por aférese</label>
+                                            </div>
+                                            <div class="form-check form-check-inline col-sm">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox22" value="parto_aborto">
+                                                <label class="form-check-label" for="inlineCheckbox22">Parto normal ou abortamento</label>
                                             </div>
                                         </div>
 
@@ -257,15 +489,93 @@
                                                 <label class="form-check-label" for="inlineCheckbox15">Amigdalectomia</label>
                                             </div>
                                         </div>
-
-                                    </div>
-
-                                    <div class="row text-center">
-                                        <div class="col-lg-6 col-sm-12 text-center mt-4 col-">
-                                            <button id="enviar" type="submit" class="btn btn-info" style="font-weight: bold; font-size: 16px;">Enviar</button>
+                                        <div class="form-group row">
+                                            <label for="procedimentos_um_ano" class="col-sm-12 col-form-label" style="text-align: left;">Nos últimos seis meses a 01 ano passou por algum desses procedimentos?</label>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox22" value="cirurgia_medio_grande_porte">
+                                                <label class="form-check-label" for="inlineCheckbox22">Foi submetido a uma cirurgia de médio ou grande porte como por exemplo: colecistectomia, histerectomia, tireoidectomia, colectomia, esplenectomia pós trauma, nefrectomia etc</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox23" value="toxoplasmose">
+                                                <label class="form-check-label" for="inlineCheckbox23">Após a cura de toxoplasmose comprovada laboratorialmente</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox24" value="endoscopia">
+                                                <label class="form-check-label" for="inlineCheckbox24">Qualquer procedimento endoscópico (endoscopia digestiva alta, colonoscopia, rinoscopia etc): aguardar 6 meses</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox25" value="piercing">
+                                                <label class="form-check-label" for="inlineCheckbox25">Se fez piercing (se piercing na cavidade oral ou genital, devido ao risco permanente de infecção, implica em inaptidão por 12 meses após a retirada)</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox25" value="febre_amarela">
+                                                <label class="form-check-label" for="inlineCheckbox25">Se contraiu Febre Amarela; aguardar 6 meses após recuperação completa (clínica e laboratorial)</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox26" value="transfusao">
+                                                <label class="form-check-label" for="inlineCheckbox26">Se recebeu uma transfusão de sangue, plasma, plaquetas ou hemoderivados</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox27" value="enxerto">
+                                                <label class="form-check-label" for="inlineCheckbox27">Se recebeu enxerto de pele</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox28" value="contaminacao_sangue">
+                                                <label class="form-check-label" for="inlineCheckbox28">Se sofreu acidente se contaminando com sangue de outra pessoa</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox29" value="acidente_agulha">
+                                                <label class="form-check-label" for="inlineCheckbox29">Se teve acidente com agulha já utilizada por outra pessoa</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox30" value="hiv_positivo">
+                                                <label class="form-check-label" for="inlineCheckbox30">Se teve contato sexual com alguma pessoa com aids ou com teste positivo para hiv</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox31" value="prostituta">
+                                                <label class="form-check-label" for="inlineCheckbox31">Se teve contato sexual em troca de dinheiro ou de drogas ou seus respectivos parceiros sexuais</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox32" value="droga_endovenosa">
+                                                <label class="form-check-label" for="inlineCheckbox32">Se teve contato sexual com usuário de droga endovenosa</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox33" value="sexo_transfusao">
+                                                <label class="form-check-label" for="inlineCheckbox33">Se teve contato sexual com pessoa que tenha recebido transfusão de sangue nos últimos 12 meses</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox34" value="sexo_hepatite">
+                                                <label class="form-check-label" for="inlineCheckbox34">Se teve relação sexual com pessoa com hepatite</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox35" value="tatuagem_maquiagem">
+                                                <label class="form-check-label" for="inlineCheckbox35">Se fez tatuagem ou maquiagem definitiva</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox36" value="sifilis">
+                                                <label class="form-check-label" for="inlineCheckbox36">Se teve sífilis ou gonorréia</label>
+                                            </div>
+                                            <div class="form-check col-sm-12">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox37" value="detido_24">
+                                                <label class="form-check-label" for="inlineCheckbox37">Se foi detido por mais de 24 horas</label>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-6 col-sm-10 mt-4 col-">
-                                            <button type="button" class="btn btn-secondary" style="font-weight: bold; font-size: 16px;">Cancelar</button>		
+
+                                        <div class="form-group row">
+                                            <label for="tuberculose" class="col-sm-12 col-form-label" style="text-align: left;">Nos últimos cinco anos passou por algum desses procedimentos?</label>
+                                            <div class="form-check form-check-inline col-sm">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox38" value="tuberculose_pulmonar">
+                                                <label class="form-check-label" for="inlineCheckbox38">Tuberculose pulmonar</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row text-center">
+                                            <div class="col-lg-6 col-sm-12 text-center mt-4 col-">
+                                                <button id="enviar" type="submit" class="btn btn-info" style="font-weight: bold; font-size: 16px;">Enviar</button>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-10 mt-4 col-">
+                                                <button type="button" class="btn btn-secondary" style="font-weight: bold; font-size: 16px;">Cancelar</button>		
+                                            </div>
                                         </div>
                                     </div>
                                 </form>			
