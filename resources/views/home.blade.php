@@ -7,7 +7,7 @@
 @stop
 @section('corpo')
 <div class="container" style="background-color: white; border-radius: 10px; box-shadow: 0px 0px 0px 0.4px; padding: 20px; margin-top: 10px; margin-bottom: 10px;">
-    <div class="row">
+    <div class="row mt-5">
         <span class="col-sm-6">
             <h2 style="color: #a40000"><strong>O HEMOCE</strong></h2>
             <p>Os Hemoces são instituições públicas (ou não) que realizam atividades de hemoterapia e hematologia com o objetivo de fornecer sangue (seus componentes e hemoderivados), aos hospitais que solicitarem, além do atendimento ambulatorial das patologias relacionadas com o sangue.</p>

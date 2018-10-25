@@ -18,6 +18,7 @@ class appController extends Controller
     		if($ab != '_token')
     			Mail::to("$value")->send(new emailHemovida());
     	}
+    	//Mail::to("josivamfreire.fj@gmail.com")->send(new emailHemovida());
 		return 'E-mails enviados com Sucesso!!!';
     }
 }
