@@ -28,46 +28,35 @@
 					<div class="row">
 						<div class="container">
 							<div class="col-lg-12 mb-3">
-								<form action="enviar_mail" class="mt-3 mb-3 ml-5 mr-5" method="post">
-									@csrf
-									<div class="table-responsive">
-
-										<table class="table">
-											<thead>
-												<tr>
-													<th>Selecione</th>
-													<th>Nome</th>
-													<th>Email</th>
-												</tr>
-											</thead>
-											<tbody>
-												<?php $cont = 1 ?>
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												{{-- <th>Selecionar</th> --}}
+												<th>Nome</th>
+												<th>Email</th>
+											</tr>
+										</thead>
+										<tbody>
+											
 												@foreach ($dados as $dado)
 												<tr>
-													<td>
-														<div class="checkbox">
-															<input type="checkbox" value={{$dado->email}} id="checkbox-1" name={{$cont}}>
-
-														</div>
-													</td>
-													<td>{{ $dado->nome }}</td>
+													{{-- <td>
+														<input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td> --}}
+														<td>{{ $dado->nome }}</td>
 													<td>{{ $dado->email }}</td>
 												</tr>
-												<?php $cont++?>
+
 												@endforeach	
+											
 
 
-
-											</tbody>										
-										</table>
-
-									</div>
-									<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
-								</form>	
-
-								{{-- @if ($nome == "DOADORES")
+										</tbody>
+									</table>	
+								</div>
+								@if ($nome == "DOADORES")
 								<button type="submit" class="btn btn-warning disabled" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
-								@endif --}}
+								@endif
 								
 							</div>
 						</div>

@@ -17,6 +17,8 @@ Route::get('/', 'doadorController@ver_doadores');
 Route::get('/hemoce', 'homeController@Home');
 Route::get('/sobre', 'homeController@Sobre');
 
+Route::get('teste', 'homeController@teste');
+Route::post('testeCheck', 'homeController@testeCheck');
 // Login doador
 Route::get('login_doador', 'loginController@FazerLogin');
 Route::post('logar_doador', 'loginController@logar');//->middleware('login_doador');
@@ -41,6 +43,6 @@ Route::post('cadastrar_funcionario', 'master_controller@Cadastrar_funcionario')-
 Route::get('ver_funcionarios', 'master_controller@ver_funcionarios')->middleware('login_hemoce');
 
 // Envio de emails
-Route::get('enviar_mail', 'appController@enviarEmail');
+Route::post('enviar_mail', 'appController@enviarEmail');
 
 ///Route::get('doadores', 'doadorController@ver_doadores');

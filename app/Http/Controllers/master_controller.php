@@ -121,6 +121,6 @@ class master_controller extends Controller
         $dados = funcionario::all();
         $nome = "FUNCIONARIOS";
         $logado = "Master";
-        return view('lista_cadastrados', compact('dados','nome','logado'));
+        return view('lista_funcionarios_cadastrados', compact('dados','nome','logado'));
     }
 }
