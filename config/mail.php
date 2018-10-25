@@ -36,7 +36,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', $MAIL_HOST),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,7 +49,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', $MAIL_PORT),
+    'port' => env('MAIL_PORT', '587'),
 
     /*
     |--------------------------------------------------------------------------
@@ -93,9 +93,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME', $MAIL_USERNAME),
+    'username' => env('MAIL_USERNAME', 'hemovidaifce@gmail.com'),
 
-    'password' => env('MAIL_PASSWORD', $MAIL_PASSWORD),
+    'password' => env('MAIL_PASSWORD', 'portgas@123'),
 
     /*
     |--------------------------------------------------------------------------
