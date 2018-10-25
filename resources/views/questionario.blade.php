@@ -51,12 +51,12 @@
                                                 <label for="peso" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Você tem peso inferior a 50 kilos?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="peso" class="custom-control-input" value="true">
-                                                        <label class="custom-control-label">Sim</label>
+                                                        <input type="radio" id="pesosim" name="peso" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="pesosim">Sim</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="peso" class="custom-control-input" value="false">
-                                                        <label class="custom-control-label">Não</label>
+                                                        <input type="radio" id="pesonao" name="peso" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="pesonao">Não</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -65,12 +65,12 @@
                                                 <label for="gravidez" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;">(Sexo feminino) Você está grávida?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="gravidez" class="custom-control-input" value="true">
-                                                        <label class="custom-control-label">Sim</label>
+                                                        <input type="radio" id="gravidezsim" name="gravidez" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="gravidezsim">Sim</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="gravidez" class="custom-control-input" value="false">
-                                                        <label class="custom-control-label">Não</label>
+                                                        <input type="radio" id="gravideznao" name="gravidez" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="gravideznao">Não</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -81,12 +81,12 @@
                                                 <label for="hiv" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tem ou teve um teste positivo para HIV?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="hiv" class="custom-control-input" value="true">
-                                                        <label class="custom-control-label">Sim</label>
+                                                        <input type="radio" id="hivsim" name="hiv" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="hivsim">Sim</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="hiv" class="custom-control-input" value="false">
-                                                        <label class="custom-control-label">Não</label>
+                                                        <input type="radio" id="hivnao" name="hiv" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="hivnao">Não</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -95,12 +95,12 @@
                                                 <label for="hepatite" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Teve hepatite após os 10 anos de idade?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="hepatite" class="custom-control-input" value="true">
-                                                        <label class="custom-control-label">Sim</label>
+                                                        <input type="radio" id="hepatitesim" name="hepatite" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="hepatitesim">Sim</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="hepatite" class="custom-control-input" value="false">
-                                                        <label class="custom-control-label">Não</label>
+                                                        <input type="radio" id="hepatitenao" name="hepatite" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="hepatitenao">Não</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,12 +111,12 @@
                                                 <label for="cancer" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Teve algum tipo de câncer, incluindo leucemia?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="cancer" class="custom-control-input" value="true">
-                                                        <label class="custom-control-label">Sim</label>
+                                                        <input type="radio" id="cancersim" name="cancer" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="cancersim">Sim</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="cancer" class="custom-control-input" value="false">
-                                                        <label class="custom-control-label">Não</label>
+                                                        <input type="radio" id="cancernao" name="cancer" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="cancernao">Não</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -125,12 +125,12 @@
                                                 <label for="problemas" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tem graves problemas no pulmão, coração, rins ou fígado?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="problemas" class="custom-control-input" value="true">
-                                                        <label class="custom-control-label">Sim</label>
+                                                        <input type="radio" id="problemassim" name="problemas" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="problemassim">Sim</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="problemas" class="custom-control-input" value="false">
-                                                        <label class="custom-control-label">Não</label>
+                                                        <input type="radio" id="problemasnao" name="problemas" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="problemasnao">Não</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -141,12 +141,12 @@
                                                 <label for="coagulacao" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Tem problema de coagulação de sangue?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="coagulacao" class="custom-control-input" value="true">
-                                                        <label class="custom-control-label">Sim</label>
+                                                        <input type="radio" id="coagulacaosim" name="coagulacao" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="coagulacaosim">Sim</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="coagulacao" class="custom-control-input" value="false">
-                                                        <label class="custom-control-label">Não</label>
+                                                        <input type="radio" id="coagulacaonao" name="coagulacao" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="coagulacaonao">Não</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,12 +155,12 @@
                                                 <label for="diabetes" class="col-lg-7 col-sm-7 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> É diabético com complicações vasculares ou em uso de insulina?</label>
                                                 <div class="col-lg-5 col-sm-5" style="margin-top: 7px">
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="diabetes" class="custom-control-input" value="true">
-                                                        <label class="custom-control-label">Sim</label>
+                                                        <input type="radio" id="diabetessim" name="diabetes" class="custom-control-input" value="true">
+                                                        <label class="custom-control-label" for="diabetessim">Sim</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" name="diabetes" class="custom-control-input" value="false">
-                                                        <label class="custom-control-label">Não</label>
+                                                        <input type="radio" id="diabetesnao" name="diabetes" class="custom-control-input" value="false">
+                                                        <label class="custom-control-label" for="diabetesnao">Não</label>
                                                     </div>
                                                 </div>
                                             </div>
