@@ -1,11 +1,10 @@
 <?php
 
-// Dados da variavel de ambiente do Heroku
-// $MAIL_HOST = getenv("MAILGUN_SMTP_SERVER");
-// $MAIL_PORT = getenv("MAILGUN_SMTP_PORT");
-// $MAIL_USERNAME = getenv("MAILGUN_SMTP_LOGIN");
-// $MAIL_PASSWORD = getenv("MAILGUN_SMTP_PASSWORD");
-// $MAIL_FROM_ADDRESS = getenv("MAIL_FROM_ADDRESS");
+//Dados da variavel de ambiente do Heroku
+$MAIL_HOST = getenv("MAILGUN_SMTP_SERVER");
+$MAIL_PORT = getenv("MAILGUN_SMTP_PORT");
+$MAIL_USERNAME = getenv("MAIL_USERNAME");
+$MAIL_PASSWORD = getenv("MAIL_PASSWORD");
 
 return [
 
@@ -36,7 +35,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', $MAIL_HOST),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,7 +48,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', '587'),
+    'port' => env('MAIL_PORT', $MAIL_PORT),
 
     /*
     |--------------------------------------------------------------------------
@@ -93,9 +92,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME', 'hemovidaifce@gmail.com'),
+    'username' => env('MAIL_USERNAME', $MAIL_USERNAME),
 
-    'password' => env('MAIL_PASSWORD', 'portgas@123'),
+    'password' => env('MAIL_PASSWORD', $MAIL_PASSWORD),
 
     /*
     |--------------------------------------------------------------------------

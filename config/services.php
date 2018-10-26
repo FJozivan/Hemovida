@@ -1,5 +1,6 @@
 <?php
-
+$MAILGUN_DOMAIN = getenv("MAILGUN_SMTP_LOGIN");
+$MAILGUN_SECRET = getenv("MAILGUN_SMTP_PASSWORD");
 return [
 
     /*
@@ -15,8 +16,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN', 'sandbox84bb7a779b1a46049ccc5df6566d25e4.mailgun.org'),
-        'secret' => env('MAILGUN_SECRET', '20683c775c3ad9f144e5e17368862324-4836d8f5-23de550c'),
+        'domain' => env('MAILGUN_DOMAIN', $MAILGUN_DOMAIN),
+        'secret' => env('MAILGUN_SECRET', $MAILGUN_SECRET),
     ],
 
     'ses' => [
