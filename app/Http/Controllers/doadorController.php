@@ -65,8 +65,11 @@ class doadorController extends Controller
     }
 
 	public function ver_doadores() {
-
-        $dados = doador::all();
+        if (request()->has('name')) {
+            $dados = doador::where('nome', request()->name)->get();
+        } else {
+            $dados = doador::all();
+        }
         $nome = "DOADORES";
         return view('lista_cadastrados', compact('dados','nome'));
     }
