@@ -35,6 +35,7 @@
 												{{-- <th>Selecionar</th> --}}
 												<th>Nome</th>
 												<th>Email</th>
+												<th>Ações</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -45,6 +46,7 @@
 														<input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td> --}}
 														<td>{{ $dado->nome }}</td>
 													<td>{{ $dado->email }}</td>
+													<td><a href="/editar_funcionario/{{ $dado->id_funcionario }}">Editar</a></td>
 												</tr>
 
 												@endforeach	

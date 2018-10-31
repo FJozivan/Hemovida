@@ -12,7 +12,7 @@
 </div> -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 	<!-- Brand -->
-	<a class="navbar-brand" href="#"><img class="" style="width: 130px" src="./img/hemovida.png"></a>
+	<a class="navbar-brand" href="#"><img class="" style="width: 130px" src="/./img/hemovida.png"></a>
 
 	<!-- Toggler/collapsibe Button -->
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -39,10 +39,10 @@
 			{{-- </ul>
 			<ul class="navbar-nav"> --}}
 				<li class="nav-item mr-3 my-lg-1">
-					<a class="btn btn-outline-info btn-sm" href="login_doador">Login</a>
+					<a class="btn btn-outline-info btn-sm" href="/login_doador">Login</a>
 				</li>
 				<li class="nav-item mr-3 my-lg-1">
-					<a class="btn btn-outline-success btn-sm" href="cadastro_doador">Cadastro</a>
+					<a class="btn btn-outline-success btn-sm" href="/cadastro_doador">Cadastro</a>
 				</li>
 				<li class="nav-item my-lg-1">
 					<a class="btn btn-outline-light btn-sm" href="/">Doadores cadastrados</a>
