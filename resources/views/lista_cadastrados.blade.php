@@ -24,7 +24,12 @@
 						</div>
 						<!-- <div class="col-xl-12"><hr style="border: 2px solid red; margin-top: -8px;"></div> -->
 					</div>
-
+					<div class="container">
+						<div class="row">
+							<input type="search" class="form-control col-sm-8 mt-3 mb-3 ml-5 mr-5" id="search" placeholder="Pesquisar por nome">
+							<button id="searchButton" class="btn btn-primary col-sm-2 mt-3 mb-3">Pesquisar</button>
+						</div>
+					</div>
 					<div class="row">
 						<div class="container">
 							<div class="col-lg-12 mb-3">
@@ -77,4 +82,18 @@
 			</div>
 		</div>
 	</div>
+
+<script>
+	$( "#searchButton" ).click(function() {
+		if ($( "#search" ).val() !== "") {
+			var location = window.location.href;
+			location = location.split("?")[0];
+			window.location.replace(location + "?name=" + $( "#search" ).val());
+		} else {
+			var location = window.location.href;
+			location = location.split("?")[0];
+			window.location.replace(location);
+		}
+	});
+</script>
 	@stop
