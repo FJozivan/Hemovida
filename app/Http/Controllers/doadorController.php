@@ -69,5 +69,18 @@ class doadorController extends Controller
         $dados = doador::all();
         $nome = "DOADORES";
         return view('lista_cadastrados', compact('dados','nome'));
-    }    
+    }
+    
+    public function EditarDoadores() {
+
+        $dados = doador::all();
+        $dados = $dados[0];
+        $titulo = "Editar doador";
+        return view('editar_doador', compact('dados', 'titulo'));
+    }
+
+    public function AtualizarDoador(Request $requisicao) {
+        echo $requisicao;
+        return redirect('/')->with('success','Cadastro realizado com sucesso!.');
+    }
 }
