@@ -50,6 +50,29 @@
 			{{-- </ul> --}}
 		@else
 			{{-- <ul class="navbar-nav"> --}}
+				@if ($logado == "Master")
+					<li class="nav-item my-lg-0 mr-3">
+							{{-- <form method="post" action="ver_funcionarios">
+								{{ csrf_field() }}
+								<button type="submit" class="btn btn-outline-warning btn-sm" value="{{ $logado }}" name="logado" >Funcionários cadastrados</button>
+							</form> --}}
+							<a class="btn btn-outline-warning btn-sm" href="ver_funcionarios">Doadores</a>
+					</li>
+					<li class="nav-item my-lg-0 mr-3">
+							{{-- <form method="post" action="ver_funcionarios">
+								{{ csrf_field() }}
+								<button type="submit" class="btn btn-outline-warning btn-sm" value="{{ $logado }}" name="logado" >Funcionários cadastrados</button>
+							</form> --}}
+							<a class="btn btn-outline-warning btn-sm" href="ver_funcionarios">Funcionários</a>
+					</li>
+					<li class="nav-item my-lg-0 mr-3">
+							{{-- <form method="post" action="cadastro_funcionario">
+								{{ csrf_field() }}
+								<button type="submit" class="btn btn-outline-danger btn-sm" value="{{ $logado }}" name="logado" >Cadastro funcionario</button>
+							</form> --}}
+							<a class="btn btn-outline-success btn-sm" href="cadastro_funcionario">Cadastro funcionario</a>
+					</li>
+				@endif
 				<li class="nav-item my-lg-0 mr-3 mb-2">
 					<div class="dropdown">
 						<button type="button" class="btn btn-outline-info dropdown-toggle btn-sm" data-toggle="dropdown">
@@ -61,23 +84,7 @@
 							{{-- <a class="dropdown-item" href="#">Link 3</a> --}}
 						</div>
 					</div>
-				</li>
-				@if ($logado == "Master")
-					<li class="nav-item my-lg-0 mr-3">
-							{{-- <form method="post" action="cadastro_funcionario">
-								{{ csrf_field() }}
-								<button type="submit" class="btn btn-outline-danger btn-sm" value="{{ $logado }}" name="logado" >Cadastro funcionario</button>
-							</form> --}}
-							<a class="btn btn-outline-danger btn-sm" href="cadastro_funcionario">Cadastro funcionario</a>
-					</li>
-					<li class="nav-item my-lg-0">
-							{{-- <form method="post" action="ver_funcionarios">
-								{{ csrf_field() }}
-								<button type="submit" class="btn btn-outline-warning btn-sm" value="{{ $logado }}" name="logado" >Funcionários cadastrados</button>
-							</form> --}}
-							<a class="btn btn-outline-warning btn-sm" href="ver_funcionarios">Funcionários cadastrados</a>
-					</li>
-				@endif
+				</li>	
 			</ul>
 		@endif
 		
