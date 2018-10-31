@@ -38,6 +38,7 @@
 													<th>Selecione</th>
 													<th>Nome</th>
 													<th>Email</th>
+													<th>Ações</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -52,11 +53,10 @@
 													</td>
 													<td>{{ $dado->nome }}</td>
 													<td>{{ $dado->email }}</td>
+													<td><a href="/editar_doador/{{ $dado->id_doador }}">Editar</a></td>
 												</tr>
 												<?php $cont++?>
 												@endforeach	
-
-
 
 											</tbody>										
 										</table>
