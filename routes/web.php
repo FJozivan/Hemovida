@@ -26,7 +26,7 @@ Route::post('logar_doador', 'loginController@logar');//->middleware('login_doado
 // Cadastro doador
 Route::get('cadastro_doador', 'doadorController@CadastroDoador');
 Route::post('cadastrar_doador', 'doadorController@CadastrarDoador');
-Route::get('editar_doador/{id}', 'doadorController@EditarDoadores');
+Route::get('editar_doador/{id}', 'doadorController@EditarDoador');
 Route::post('atualizar_doador', 'doadorController@AtualizarDoador');
 
 // Questionário doador
@@ -43,6 +43,8 @@ Route::post('cadastrar_funcionario', 'master_controller@Cadastrar_funcionario')-
 
 // Ver funcionarios cadastrados
 Route::get('ver_funcionarios', 'master_controller@ver_funcionarios')->middleware('login_hemoce');
+Route::get('editar_funcionario/{id}', 'master_controller@EditarFuncionario')->middleware('login_hemoce');
+Route::post('atualizar_funcionario', 'master_controller@AtualizarFuncionario')->middleware('login_hemoce');
 
 // Envio de emails
 Route::post('enviar_mail', 'appController@enviarEmail');

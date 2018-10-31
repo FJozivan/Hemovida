@@ -123,4 +123,16 @@ class master_controller extends Controller
         $logado = "Master";
         return view('lista_funcionarios_cadastrados', compact('dados','nome','logado'));
     }
+
+    public function EditarFuncionario($id) {
+        $dados = funcionario::where('id_funcionario',  $id)->first();
+        $titulo = "Editar funcionário";
+        $logado = "Master";
+        return view('editar_funcionario', compact('dados', 'titulo', 'logado'));
+    }
+
+    public function AtualizarFuncionario(Request $requisicao) {
+        echo $requisicao;
+        return redirect('/ver_funcionarios')->with('success','Cadastro realizado com sucesso!.');
+    }
 }

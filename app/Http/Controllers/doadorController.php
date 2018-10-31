@@ -71,7 +71,7 @@ class doadorController extends Controller
         return view('lista_cadastrados', compact('dados','nome'));
     }
     
-    public function EditarDoadores($id) {
+    public function EditarDoador($id) {
         $dados = doador::where('id_doador',  $id)->first();
         $titulo = "Editar doador";
         return view('editar_doador', compact('dados', 'titulo'));

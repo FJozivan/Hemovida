@@ -41,7 +41,7 @@
 										</ul>
 									</div>
 									@endif --}}
-									<form method="POST" action="atualizar_doador">
+									<form method="POST" action="/atualizar_doador">
 										{{ csrf_field() }}
 										<div class="container font">
 											<div class="col-lg-12 col-sm-12">
@@ -264,7 +264,7 @@
 												</div>
 												<div class="row text-center">
 													<div class="col-lg-6 col-sm-12 text-center mt-4 col-">
-														<button id="cadastrar" type="submit" class="btn btn-info" style="font-weight: bold; font-size: 16px;">Atualizar</button>
+														<button id="atualizar" type="submit" class="btn btn-info" style="font-weight: bold; font-size: 16px;">Atualizar</button>
 													</div>
 													<div class="col-lg-6 col-sm-10 mt-4 col-">
 														<button type="submit" class="btn btn-secondary" style="font-weight: bold; font-size: 16px;">Cancelar</button>		
