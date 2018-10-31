@@ -26,7 +26,7 @@ Route::post('logar_doador', 'loginController@logar');//->middleware('login_doado
 // Cadastro doador
 Route::get('cadastro_doador', 'doadorController@CadastroDoador');
 Route::post('cadastrar_doador', 'doadorController@CadastrarDoador');
-Route::get('editar_doador', 'doadorController@EditarDoadores');
+Route::get('editar_doador/{id}', 'doadorController@EditarDoadores');
 Route::post('atualizar_doador', 'doadorController@AtualizarDoador');
 
 // Questionário doador
