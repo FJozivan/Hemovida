@@ -1,6 +1,6 @@
 <?php
-$MAILGUN_DOMAIN = getenv("MAILGUN_DOMAIN");
-$MAILGUN_SECRET = getenv("MAILGUN_API_KEY");
+// $MAILGUN_DOMAIN = getenv("MAILGUN_DOMAIN");
+// $MAILGUN_SECRET = getenv("MAILGUN_API_KEY");
 return [
 
     /*
