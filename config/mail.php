@@ -35,7 +35,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST','MAILGUN_SMTP_PORT'),
+    'host' => env('MAIL_HOST','MAILGUN_SMTP_SERVER'),
 
     /*
     |--------------------------------------------------------------------------
@@ -48,7 +48,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT'),
+    'port' => env('MAIL_PORT','MAILGUN_SMTP_PORT'),
 
     /*
     |--------------------------------------------------------------------------
