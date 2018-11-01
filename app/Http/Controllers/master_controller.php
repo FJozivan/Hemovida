@@ -182,7 +182,6 @@ class master_controller extends Controller
 
         $doador->save();
         $logado = "Master";
-        echo $requisicao;
         return $this->ver_doadores();
     }
 }   
