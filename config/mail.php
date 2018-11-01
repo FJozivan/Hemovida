@@ -1,10 +1,10 @@
 <?php
 
 //Dados da variavel de ambiente do Heroku
-// $MAIL_HOST = getenv("MAILGUN_SMTP_SERVER");
-// $MAIL_PORT = getenv("MAILGUN_SMTP_PORT");
-// $MAIL_USERNAME = getenv("MAIL_USERNAME");
-// $MAIL_PASSWORD = getenv("MAIL_PASSWORD");
+$MAIL_HOST = getenv("MAILGUN_SMTP_SERVER");
+$MAIL_PORT = getenv("MAILGUN_SMTP_PORT");
+$MAIL_USERNAME = getenv("MAILGUN_SMTP_LOGIN");
+$MAIL_PASSWORD = getenv("MAILGUN_SMTP_PASSWORD");
 
 return [
 
@@ -64,7 +64,7 @@ return [
     'from' => [
        // 'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
        // 'name' => env('MAIL_FROM_NAME', 'Example'),
-        'address' => env('MAIL_FROM_ADDRESS','josivamfreire.fj@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS','hemovidaifce@gmail.com'),
         'name' => env('Sistema Hemovida'),
     ],
 

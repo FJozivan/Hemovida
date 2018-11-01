@@ -14,12 +14,12 @@ class appController extends Controller
 
     	$a = $requisicao->all();
     	$cont = 0;
-    	// foreach ($a as $ab => $value) {
-    	// 	if($ab != '_token')
-    	// 		Mail::to("$value")->send(new emailHemovida());
-    	// 		$cont++;
-    	// }
-    	Mail::to("hemovidaifce@gmail.com")->send(new emailHemovida());
-		//dd($cont);
+    	foreach ($a as $ab => $value) {
+    		if($ab != '_token')
+    			Mail::to("$value")->send(new emailHemovida());
+    			$cont++;
+    	}
+    	//Mail::to("hemovidaifce@gmail.com")->send(new emailHemovida());
+		return ("Emails enviados com sucesso");
     }
 }
