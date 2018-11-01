@@ -17,7 +17,7 @@
 						<div class="col-xl-12">
 							<center>
 								<h5 style="margin-top: 20px; font-family: 'Raleway', sans-serif; color: red;">
-									{{ $nome }} CADASTRADOS
+									Doadores
 								</h5>
 								<hr style="background-color: red; margin-top: 5px">
 							</center>
@@ -26,8 +26,11 @@
 					</div>
 					<div class="container">
 						<div class="row">
-							<input type="search" class="form-control col-sm-8 mt-3 mb-3 ml-5 mr-5" id="search" placeholder="Pesquisar por nome">
-							<button id="searchButton" class="btn btn-primary col-sm-2 mt-3 mb-3">Pesquisar</button>
+							<div class="col-lg-4"></div>
+							<div class="col-lg-4">								
+								<input class="form-control mb-2" style="background: none; border-radius: 20px" id="myInput" id="" type="text" placeholder="Pesquisar...">
+							</div>
+							
 						</div>
 					</div>
 					<div class="row">
@@ -42,11 +45,12 @@
 												<tr>
 													<th>Selecione</th>
 													<th>Nome</th>
+													<th>Tipo San</th>
 													<th>Email</th>
 													<th>Ações</th>
 												</tr>
 											</thead>
-											<tbody>
+											<tbody id="myTable">
 												<?php $cont = 1 ?>
 												@foreach ($dados as $dado)
 												<tr>
@@ -57,8 +61,9 @@
 														</div>
 													</td>
 													<td>{{ $dado->nome }}</td>
+													<td>{{$dado->tipo_sanguineo}}</td>
 													<td>{{ $dado->email }}</td>
-													<td><a href="/editar_doador/{{ $dado->id_doador }}">Editar</a></td>
+													<td><a href="/editar_doador/{{ $dado->id }}">visualizar</a></td>
 												</tr>
 												<?php $cont++?>
 												@endforeach	
@@ -83,17 +88,27 @@
 		</div>
 	</div>
 
-<script>
-	$( "#searchButton" ).click(function() {
-		if ($( "#search" ).val() !== "") {
-			var location = window.location.href;
-			location = location.split("?")[0];
-			window.location.replace(location + "?name=" + $( "#search" ).val());
-		} else {
-			var location = window.location.href;
-			location = location.split("?")[0];
-			window.location.replace(location);
-		}
-	});
-</script>
+	<script>
+		$( "#searchButton" ).click(function() {
+			if ($( "#search" ).val() !== "") {
+				var location = window.location.href;
+				location = location.split("?")[0];
+				window.location.replace(location + "?name=" + $( "#search" ).val());
+			} else {
+				var location = window.location.href;
+				location = location.split("?")[0];
+				window.location.replace(location);
+			}
+		});
+	</script>
+	<script>
+			$(document).ready(function(){
+				$("#myInput").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#myTable tr").filter(function() {
+						$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				});
+			});
+		</script>
 	@stop

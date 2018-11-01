@@ -42,7 +42,8 @@
 									</div>
 									@endif --}}
 									<form method="POST" action="cadastrar_doador">
-										{{ csrf_field() }}
+										@csrf
+										
 										<div class="container font">
 											<div class="col-lg-12 col-sm-12">
 												<p style="margin-left: -25px;">IDENTIFICAÇÃO</p>

@@ -16,7 +16,7 @@ class CreateTableDoador extends Migration
         Schema::create('doadors', function (Blueprint $table) {
             
             //Minhas colunas
-            $table->increments('id_doador');
+            $table->increments('id');
 
             $table->date('data_nascimento')->nullable($value = false);
 

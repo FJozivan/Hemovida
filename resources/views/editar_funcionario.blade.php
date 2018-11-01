@@ -28,9 +28,9 @@
 						<div class="container">
 							<div class="col-lg-12 mb-3">
 								@if ($errors->has('sexo'))
-									<span class="invalid-feedback" role="alert">
-										<strong>{{ $errors->first('sexo') }}</strong>
-									</span>
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $errors->first('sexo') }}</strong>
+								</span>
 								@endif
 								{{-- @if (isset($errors))
 								@if (count($errors) != 0)
@@ -49,9 +49,11 @@
 								@endif --}}
 								
 								<form method="post" action="/atualizar_funcionario">
-
-									{{-- {{ csrf_field() }} --}}
 									@csrf
+
+									{{-- Id do funcionario --}}
+									<input type="hidden" name="id" value="{{$dados->id}}">
+
 
 									<div class="container font">
 										<div class="col-lg-12 col-sm-12">
@@ -59,6 +61,7 @@
 										</div>
 
 										<div class="form-group row">
+
 											<label for="numero_de_inscricao" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> N° inscrição</label>
 											<div class="col-lg-10 col-sm-10">
 												<input type="text" class="form-control {{ $errors->has('numero_de_inscricao') ? ' is-invalid' : '' }}" id="numero_de_inscricao" name="numero_de_inscricao" value="{{ $dados->inscricao_hemoce }}">
@@ -131,7 +134,7 @@
 										<div class="form-group row">
 											<label for="senha" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Senha:</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="password" class="form-control {{ $errors->has('senha') ? ' is-invalid' : '' }}" id="senha" name="senha">
+												<input type="password" class="form-control {{ $errors->has('senha') ? ' is-invalid' : '' }}" id="senha" name="senha" disabled>
 
 												@if ($errors->has('senha'))
 												<span class="invalid-feedback" role="alert">
@@ -144,7 +147,7 @@
 										<div class="form-group row">
 											<label for="confirma_senha" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Confirmar senha:</label>
 											<div class="col-lg-10 col-sm-10">
-												<input type="password" class="form-control" id="confirma_senha" name="confirma_senha">
+												<input type="password" class="form-control" id="confirma_senha" name="confirma_senha" disabled>
 												<div class="invalid-feedback">
 													Confirmação de senha não confere
 												</div>
@@ -154,12 +157,8 @@
 										</div>
 
 										<div class="row text-center">
-											<div class="col-lg-6 col-sm-12 text-center mt-2 col-">
+											<div class="col-lg-12 col-sm-12 text-center mt-2 col-">
 												<button type="submit" id="atualizar" class="btn btn-info" style="font-weight: bold; font-size: 16px;">Atualizar</button>
-											</div>
-
-											<div class="col-lg-6 col-sm-10 mt-2 col-">
-												<a href="ver_funcionarios" class="btn btn-secondary ml-2">Cancelar</a>	
 											</div>
 										</div>
 									</div>
@@ -190,10 +189,10 @@
 			}
 		}
 
-        if ("{{ $dados->sexo == 'm' }}" == 1) {
-            document.getElementById("masculino").checked = true;
-        } else if ("{{ $dados->sexo == 'f' }}" == 1) {
-            document.getElementById("feminino").checked = true;
-        }
+		if ("{{ $dados->sexo == 'm' }}" == 1) {
+			document.getElementById("masculino").checked = true;
+		} else if ("{{ $dados->sexo == 'f' }}" == 1) {
+			document.getElementById("feminino").checked = true;
+		}
 	</script>
 	@stop

@@ -49,8 +49,6 @@
 								@endif --}}
 								
 								<form method="post" action="cadastrar_funcionario">
-
-									{{-- {{ csrf_field() }} --}}
 									@csrf
 
 									<div class="container font">

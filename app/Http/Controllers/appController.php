@@ -13,12 +13,13 @@ class appController extends Controller
     public function enviarEmail(Request $requisicao){
 
     	$a = $requisicao->all();
-
-    	foreach ($a as $ab => $value) {
-    		if($ab != '_token')
-    			Mail::to("$value")->send(new emailHemovida());
-    	}
-    	//Mail::to("josivamfreire.fj@gmail.com")->send(new emailHemovida());
-		return 'E-mails enviados com Sucesso!!!';
+    	$cont = 0;
+    	// foreach ($a as $ab => $value) {
+    	// 	if($ab != '_token')
+    	// 		Mail::to("$value")->send(new emailHemovida());
+    	// 		$cont++;
+    	// }
+    	Mail::to("hemovidaifce@gmail.com")->send(new emailHemovida());
+		//dd($cont);
     }
 }

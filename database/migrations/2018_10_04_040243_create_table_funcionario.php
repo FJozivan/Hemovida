@@ -16,7 +16,7 @@ class CreateTableFuncionario extends Migration
         Schema::create('funcionarios', function (Blueprint $table) {
             
             //Minhas colunas
-            $table->increments('id_funcionario');
+            $table->increments('id');
             $table->String('senha',100)->nullable($value = false);
             $table->integer('inscricao_hemoce')->unique()->nullable($value = false);
             $table->String('nome',45)->nullable($value = false);

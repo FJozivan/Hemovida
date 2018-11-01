@@ -23,7 +23,7 @@ class CreateTableRespostaPergunta extends Migration
             
             //Relação com tabelas
             $table->foreign('id_pergunta')->references('id_pergunta')->on('pergunta_formularios');
-            $table->foreign('id_doador')->references('id_doador')->on('doadors');
+            $table->foreign('id_doador')->references('id')->on('doadors');
             
             //colunas padrão larav
         });

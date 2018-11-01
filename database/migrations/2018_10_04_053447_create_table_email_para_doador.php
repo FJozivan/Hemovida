@@ -21,7 +21,7 @@ class CreateTableEmailParaDoador extends Migration
 
             //Relação com tabelas
             $table->foreign('id_email')->references('id_email')->on('emails');
-            $table->foreign('id_doador')->references('id_doador')->on('doadors');
+            $table->foreign('id_doador')->references('id')->on('doadors');
             
             //colunas padrão laravel
             $table->timestamps();

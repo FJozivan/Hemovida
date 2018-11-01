@@ -41,7 +41,7 @@
     </div>
     @endif
     <form action="logar_hemoce" class="mt-3 mb-3 ml-5 mr-5" method="post">
-        {{ csrf_field() }}
+        @csrf
 
         <div class="form-group">
             <label for="numero_inscricao">N° inscrição:</label>

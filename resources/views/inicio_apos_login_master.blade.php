@@ -17,7 +17,8 @@
 							<div class="col-lg-12 mb-3">
 								<div class="row text-center">	
 									<div class="col-lg-6 col-sm-10 mt-2 col-"> --}}
-										<div class="col-lg-5 col-sm-6 col-">
+										<div class="col-lg-4 col-sm-4 col-"></div>
+										<div class="col-lg-4 col-sm-4 col-">
 											<div class="input-group mb-2">
 											<div class="input-group-prepend mt-2 mr-2">
 												<i class="fas fa-search"></i>
@@ -26,7 +27,7 @@
 										</div>
 										</div>
 
-										<div class="col-lg-6 col-sm-6 col-">
+										<div class="col-lg-4 col-sm-4 col-">
 											<table class="table table-borderless text-center" style="color:white">
 												<thead>
 													<tr>

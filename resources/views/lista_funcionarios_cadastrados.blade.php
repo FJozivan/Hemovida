@@ -46,7 +46,7 @@
 														<input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td> --}}
 														<td>{{ $dado->nome }}</td>
 													<td>{{ $dado->email }}</td>
-													<td><a href="/editar_funcionario/{{ $dado->id_funcionario }}">Editar</a></td>
+													<td><a href="/editar_funcionario/{{ $dado->id }}">visualizar</a></td>
 												</tr>
 
 												@endforeach	

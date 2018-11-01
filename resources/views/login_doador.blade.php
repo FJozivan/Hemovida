@@ -50,7 +50,7 @@
     </div>
     @endif
     <form action="logar_doador" class="mt-3 mb-3 ml-5 mr-5" method="post">
-        {{ csrf_field() }}
+        @csrf
 
         <div class="form-group">
             <label for="cpf">CPF:</label>

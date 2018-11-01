@@ -42,7 +42,11 @@
 									</div>
 									@endif --}}
 									<form method="POST" action="/atualizar_doador">
-										{{ csrf_field() }}
+										@csrf
+										
+										{{-- Id do funcionario --}}
+										<input type="hidden" name="id" value="{{$dados->id}}">
+
 										<div class="container font">
 											<div class="col-lg-12 col-sm-12">
 												<p style="margin-left: -25px;">IDENTIFICAÇÃO</p>
@@ -133,29 +137,6 @@
 												<label for="profissao" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;">Profissão:</label>
 												<div class="col-lg-10 col-sm-10">
 													<input type="text" class="form-control" id="profissao" name="profissao" value="{{ $dados->profissao }}">
-												</div>
-											</div>
-
-											<div class="form-group row">
-												<label for="senha" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Senha:</label>
-												<div class="col-lg-10 col-sm-10">
-													<input type="password" class="form-control {{ $errors->has('senha') ? ' is-invalid' : '' }}" id="senha" name="senha" value="{{ old('senha') }}">
-
-													@if ($errors->has('senha'))
-													<span class="invalid-feedback" role="alert">
-														<strong>{{ $errors->first('senha') }}</strong>
-													</span>
-													@endif
-												</div>
-											</div>
-
-											<div class="form-group row">
-												<label for="senha_confirmada" class="col-lg-2 col-sm-2 col-form-label" style="text-align: left;"><span class="obrigatorio">*</span> Confirmar senha:</label>
-												<div class="col-lg-10 col-sm-10">
-													<input type="password" class="form-control" id="senha_confirmada" name="senha_confirmada">
-													<div class="invalid-feedback">
-														Confirmação de senha não confere
-													</div>
 												</div>
 											</div>
 
@@ -263,11 +244,8 @@
 													</div>
 												</div>
 												<div class="row text-center">
-													<div class="col-lg-6 col-sm-12 text-center mt-4 col-">
+													<div class="col-lg-12 col-sm-12 text-center mt-4 col-">
 														<button id="atualizar" type="submit" class="btn btn-info" style="font-weight: bold; font-size: 16px;">Atualizar</button>
-													</div>
-													<div class="col-lg-6 col-sm-10 mt-4 col-">
-														<button type="submit" class="btn btn-secondary" style="font-weight: bold; font-size: 16px;">Cancelar</button>		
 													</div>
 												</div>
 

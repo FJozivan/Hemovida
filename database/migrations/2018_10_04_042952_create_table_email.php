@@ -22,7 +22,7 @@ class CreateTableEmail extends Migration
             $table->integer('id_funcionario')->unsigned();
 
             //Relação com tabelas
-            $table->foreign('id_funcionario')->references('id_funcionario')->on('funcionarios');
+            $table->foreign('id_funcionario')->references('id')->on('funcionarios');
 
             //colunas padrão laravel
             $table->timestamps();
