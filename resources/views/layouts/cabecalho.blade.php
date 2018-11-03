@@ -12,7 +12,7 @@
 </div> -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 	<!-- Brand -->
-	<a class="navbar-brand" href="#"><img class="" style="width: 130px" src="/./img/hemovida.png"></a>
+	<a class="navbar-brand" href="/"><img class="" style="width: 130px" src="/./img/hemovida.png"></a>
 
 	<!-- Toggler/collapsibe Button -->
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -45,7 +45,7 @@
 					<a class="btn btn-outline-success btn-sm" href="/cadastro_doador">Cadastro</a>
 				</li>
 				<li class="nav-item my-lg-1">
-					<a class="btn btn-outline-light btn-sm" href="/">Doadores cadastrados</a>
+					<a class="btn btn-outline-light btn-sm" href="/doadoresCadastrados">Doadores cadastrados</a>
 				</li>
 			{{-- </ul> --}}
 		@else
