@@ -44,9 +44,9 @@
 				<li class="nav-item mr-3 my-lg-1">
 					<a class="btn btn-outline-success btn-sm" href="/cadastro_doador">Cadastro</a>
 				</li>
-				<li class="nav-item my-lg-1">
+				{{-- <li class="nav-item my-lg-1">
 					<a class="btn btn-outline-light btn-sm" href="/doadoresCadastrados">Doadores cadastrados</a>
-				</li>
+				</li> --}}
 			{{-- </ul> --}}
 		@else
 			{{-- <ul class="navbar-nav"> --}}
@@ -72,13 +72,13 @@
 							</form> --}}
 							<a class="btn btn-outline-success btn-sm" href="/cadastro_funcionario">Cadastro funcionario</a>
 					</li>
-					<li class="nav-item my-lg-0 mr-3">
+					{{-- <li class="nav-item my-lg-0 mr-3">
 							{{-- <form method="post" action="cadastro_funcionario">
 								{{ csrf_field() }}
 								<button type="submit" class="btn btn-outline-danger btn-sm" value="{{ $logado }}" name="logado" >Cadastro funcionario</button>
 							</form> --}}
 							<a class="btn btn-outline-success btn-sm" href="/cadastro_doador">Cadastro Doadores</a>
-					</li>
+					</li> --}}
 				@endif
 				<li class="nav-item my-lg-0 mr-3 mb-2">
 					<div class="dropdown">
