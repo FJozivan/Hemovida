@@ -73,10 +73,6 @@
 							<a class="btn btn-outline-success btn-sm" href="/cadastro_funcionario">Cadastro funcionario</a>
 					</li>
 					{{-- <li class="nav-item my-lg-0 mr-3">
-							{{-- <form method="post" action="cadastro_funcionario">
-								{{ csrf_field() }}
-								<button type="submit" class="btn btn-outline-danger btn-sm" value="{{ $logado }}" name="logado" >Cadastro funcionario</button>
-							</form> --}}
 							<a class="btn btn-outline-success btn-sm" href="/cadastro_doador">Cadastro Doadores</a>
 					</li> --}}
 				@endif
