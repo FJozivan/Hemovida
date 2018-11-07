@@ -63,7 +63,14 @@
 													<td>{{ $dado->nome }}</td>
 													<td>{{$dado->tipo_sanguineo}}</td>
 													<td>{{ $dado->email }}</td>
-													<td><a href="/editar_doador/{{ $dado->id }}">visualizar</a></td>
+													<td>
+														<a href="/editar_doador/{{ $dado->id }}">visualizar</a>
+														<form method="POST" action="/apagar_doador">
+															@csrf
+															<input type="hidden" name="id" value="{{$dado->id}}">
+															<button class="btn btn-danger" type="submit">apagar</button>
+														</form>
+													</td>
 												</tr>
 												<?php $cont++?>
 												@endforeach	

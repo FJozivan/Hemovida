@@ -118,6 +118,7 @@ class master_controller extends Controller
 
     	//dd($funcionario);
         $funcionario->save(); 
+        return redirect('/ver_funcionarios')->with('success','Funcionário cadastrado com sucesso!');
     }
 
     public function ver_funcionarios(Request $requisicao) {
@@ -146,7 +147,13 @@ class master_controller extends Controller
 
         $funcionario->save();
 
-        return redirect('/ver_funcionarios')->with('success','Cadastro realizado com sucesso!.');
+        return redirect('/ver_funcionarios')->with('success','Cadastro realizado com sucesso!');
+    }
+
+    public function ApagarFuncionario(Request $requisicao) {
+        $logado = "Master";
+        funcionario::destroy($requisicao->id);
+        return redirect('/ver_funcionarios')->with('success','Funcionário apagado com sucesso!');
     }
 
     public function ver_doadores() {
@@ -160,6 +167,12 @@ class master_controller extends Controller
         $dados = doador::where('id', $id)->first();
         $titulo = "Editar doador";
         return view('editar_doador', compact('dados', 'titulo','logado'));
+    }
+
+    public function ApagarDoador(Request $requisicao) {
+        $logado = "Master";
+        doador::destroy($requisicao->id);
+        return $this->ver_doadores();
     }
 
     public function AtualizarDoador(Request $requisicao) {

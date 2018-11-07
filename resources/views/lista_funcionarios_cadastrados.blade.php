@@ -46,7 +46,14 @@
 														<input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td> --}}
 														<td>{{ $dado->nome }}</td>
 													<td>{{ $dado->email }}</td>
-													<td><a href="/editar_funcionario/{{ $dado->id }}">visualizar</a></td>
+													<td>
+														<a href="/editar_funcionario/{{ $dado->id }}">visualizar</a>
+														<form method="POST" action="/apagar_funcionario">
+															@csrf
+															<input type="hidden" name="id" value="{{$dado->id}}">
+															<button class="btn btn-danger" type="submit">apagar</button>
+														</form>
+													</td>
 												</tr>
 
 												@endforeach	
