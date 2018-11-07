@@ -49,7 +49,7 @@
 														<a href="/editar_funcionario/{{ $dado->id }}">Visualizar</a>
 														<span> / </span>
 														{{-- Apagar funcionario --}}
-														<a href="/apagar_funcionario/{{ $dado->id }}">Deletar</a>
+														<a href="/apagar_funcionario/{{ $dado->id }}" class="btn btn-danger btn-sm" >Deletar</a>
 													</td>
 												</tr>
 

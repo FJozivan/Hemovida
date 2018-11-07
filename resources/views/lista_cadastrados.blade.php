@@ -70,7 +70,7 @@
 														<span> / </span>
 
 														{{-- deletar Doadores--}}
-														<a href="/apagar_doador/{{ $dado->id }}" id="deletar">Deletar</a>
+														<a href="/apagar_doador/{{ $dado->id }}" class="btn btn-danger btn-sm" id="deletar">Deletar</a>
 													</td>
 												</tr>
 												<?php $cont++?>
