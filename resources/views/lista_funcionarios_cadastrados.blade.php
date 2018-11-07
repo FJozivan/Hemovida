@@ -42,31 +42,21 @@
 											
 												@foreach ($dados as $dado)
 												<tr>
-													{{-- <td>
-														<input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td> --}}
-														<td>{{ $dado->nome }}</td>
+													<td>{{ $dado->nome }}</td>
 													<td>{{ $dado->email }}</td>
 													<td>
-														<a href="/editar_funcionario/{{ $dado->id }}">visualizar</a>
-														<form method="POST" action="/apagar_funcionario">
-															@csrf
-															<input type="hidden" name="id" value="{{$dado->id}}">
-															<button class="btn btn-danger" type="submit">apagar</button>
-														</form>
+														{{-- Editar funcionario --}}
+														<a href="/editar_funcionario/{{ $dado->id }}">Visualizar</a>
+														<span> / </span>
+														{{-- Apagar funcionario --}}
+														<a href="/apagar_funcionario/{{ $dado->id }}">Deletar</a>
 													</td>
 												</tr>
 
 												@endforeach	
-											
-
-
 										</tbody>
 									</table>	
-								</div>
-								@if ($nome == "DOADORES")
-								<button type="submit" class="btn btn-warning disabled" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
-								@endif
-								
+								</div>								
 							</div>
 						</div>
 					</div>

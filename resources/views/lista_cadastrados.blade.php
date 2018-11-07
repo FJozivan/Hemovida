@@ -4,9 +4,10 @@
 @stop
 @section('corpo')
 @if (isset($success))
-<script type="text/javascript">
-	alert({{ $success }});
-</script>
+	<script type="text/javascript">
+		alert({{ $success }});
+	</script>
+	{{$success}}
 @endif
 <div class="container-fluid mb-5" style="background-color: #182E47; margin-top: 80px;">
 	<div class="row">
@@ -64,12 +65,12 @@
 													<td>{{$dado->tipo_sanguineo}}</td>
 													<td>{{ $dado->email }}</td>
 													<td>
-														<a href="/editar_doador/{{ $dado->id }}">visualizar</a>
-														<form method="POST" action="/apagar_doador">
-															@csrf
-															<input type="hidden" name="id" value="{{$dado->id}}">
-															<button class="btn btn-danger" type="submit">apagar</button>
-														</form>
+														{{-- Visualizar Doadores--}}
+														<a href="/editar_doador/{{ $dado->id }}">Visualizar</a>
+														<span> / </span>
+
+														{{-- deletar Doadores--}}
+														<a href="/apagar_doador/{{ $dado->id }}" id="deletar">Deletar</a>
 													</td>
 												</tr>
 												<?php $cont++?>
@@ -79,13 +80,8 @@
 										</table>
 
 									</div>
-									<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
-								</form>	
-
-								{{-- @if ($nome == "DOADORES")
-								<button type="submit" class="btn btn-warning disabled" style="font-weight: bold; font-size: 16px;">Enviar Email</button>
-								@endif --}}
-								
+									<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;" id="email">Enviar Email</button>
+								</form>								
 							</div>
 						</div>
 					</div>
@@ -117,5 +113,18 @@
 					});
 				});
 			});
+
+			// 'var buttonDeletar = document.getElementById('deletar');
+						// buttonDeletar.onclick = function(){
+						// 	confirm("deseja realmente apagar o doador?");
+						// };'
+				var buttonEmail = document.getElementById('email');
+				function habilidaDisable(){
+					buttonEmail.disabled = true;
+				}
+
+				function desabilidaDisable(){
+					buttonEmail.disabled = false;
+				}
 		</script>
 	@stop

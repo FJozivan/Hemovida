@@ -28,7 +28,7 @@ Route::post('cadastrar_doador', 'doadorController@CadastrarDoador');
 
 Route::get('editar_doador/{id}', 'master_controller@EditarDoador');
 Route::post('atualizar_doador', 'master_controller@AtualizarDoador');
-Route::post('apagar_doador', 'master_controller@ApagarDoador');
+Route::get('/apagar_doador/{id}', 'master_controller@ApagarDoador');
 
 // Questionário doador
 Route::get('questionario', 'doadorController@Questionario');
@@ -48,7 +48,7 @@ Route::post('cadastrar_funcionario', 'master_controller@Cadastrar_funcionario')-
 Route::get('/ver_funcionarios', 'master_controller@ver_funcionarios')->middleware('login_hemoce');
 Route::get('editar_funcionario/{id}', 'master_controller@EditarFuncionario')->middleware('login_hemoce');
 Route::post('atualizar_funcionario', 'master_controller@AtualizarFuncionario')->middleware('login_hemoce');
-Route::post('apagar_funcionario', 'master_controller@ApagarFuncionario')->middleware('login_hemoce');
+Route::get('/apagar_funcionario/{id}', 'master_controller@ApagarFuncionario')->middleware('login_hemoce');
 
 // Envio de emails
 Route::post('enviar_mail', 'appController@enviarEmail');

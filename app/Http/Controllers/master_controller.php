@@ -150,9 +150,9 @@ class master_controller extends Controller
         return redirect('/ver_funcionarios')->with('success','Cadastro realizado com sucesso!');
     }
 
-    public function ApagarFuncionario(Request $requisicao) {
-        $logado = "Master";
-        funcionario::destroy($requisicao->id);
+    public function ApagarFuncionario($id) {
+        //$logado = "Master";
+        funcionario::destroy($id);
         return redirect('/ver_funcionarios')->with('success','Funcionário apagado com sucesso!');
     }
 
@@ -169,10 +169,9 @@ class master_controller extends Controller
         return view('editar_doador', compact('dados', 'titulo','logado'));
     }
 
-    public function ApagarDoador(Request $requisicao) {
-        $logado = "Master";
-        doador::destroy($requisicao->id);
-        return $this->ver_doadores();
+    public function ApagarDoador($id) {
+        doador::destroy($id);
+        return redirect('/doadoresCadastrados')->with('success','Funcionário apagado com sucesso!');
     }
 
     public function AtualizarDoador(Request $requisicao) {
