@@ -50,7 +50,8 @@ class loginController extends Controller
                 $requisicao->session()->push('usuario', [
                     'user' => 'd'
                 ]);
-                return view('perfil_doador', compact('titulo','logado'));
+                
+                return redirect('/perfil_doador');
 
  
             }else{
@@ -68,5 +69,9 @@ class loginController extends Controller
         $requisicao->session()->forget('usuario');
         return redirect('login_doador');
         //return "Deslogado";
+    }
+
+    public function perfil_doador(){
+        return view('perfil_doador');
     }
 }

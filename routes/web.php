@@ -22,6 +22,7 @@ Route::post('testeCheck', 'homeController@testeCheck');
 Route::get('login_doador', 'loginController@FazerLogin');
 Route::post('logar_doador', 'loginController@logar');//->middleware('login_doador');
 Route::get('logout_doador', 'loginController@logout');
+Route::get('/perfil_doador', 'loginController@perfil_doador');
 
 // Cadastro doador
 Route::get('/cadastro_doador', 'doadorController@CadastroDoador');

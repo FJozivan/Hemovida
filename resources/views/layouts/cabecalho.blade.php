@@ -49,6 +49,11 @@
 								<a class="btn btn-outline-success btn-sm" href="/cadastro_funcionario">Cadastro funcionario</a>
 						</li>
 					@endif
+					@if(session()->get('usuario')[0]['user'] === "d")
+						<li class="nav-item my-lg-0 mr-3">									
+								<a class="btn btn-outline-warning btn-sm" href="/perfil_doador">Meu perfil</a>
+						</li>
+					@endif
 					<li class="nav-item my-lg-0 mr-3 mb-2">
 						<div class="dropdown">
 							<button type="button" class="btn btn-outline-info dropdown-toggle btn-sm" data-toggle="dropdown">

@@ -62,25 +62,4 @@ class doadorController extends Controller
         $titulo = "Questionário do doador";
         return view('questionario', compact('titulo'));
     }
-
-	// public function ver_doadores() {
- //        if (request()->has('name')) {
- //            $dados = doador::where('nome', request()->name)->get();
- //        } else {
- //            $dados = doador::all();
- //        }
- //        $nome = "DOADORES";
- //        return view('lista_cadastrados', compact('dados','nome'));
- //    }
-    
-    // public function EditarDoador($id) {
-    //     $dados = doador::where('id_doador',  $id)->first();
-    //     $titulo = "Editar doador";
-    //     return view('editar_doador', compact('dados', 'titulo'));
-    // }
-
-    // public function AtualizarDoador(Request $requisicao) {
-    //     echo $requisicao;
-    //     return redirect('/')->with('success','Cadastro realizado com sucesso!.');
-    // }
 }

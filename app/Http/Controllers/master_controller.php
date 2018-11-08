@@ -117,21 +117,19 @@ class master_controller extends Controller
         $funcionario->senha = md5($requisicao->senha);
 
         $funcionario->save(); 
-        return redirect('/ver_funcionarios')->with('success','Funcionário cadastrado com sucesso!');
+        $requisicao->session()->flash('success','Funcionario cadastrado com sucesso!');
+        return redirect('/ver_funcionarios');
     }
 
     public function ver_funcionarios(Request $requisicao) {
 
         $dados = funcionario::all();
-        $nome = "FUNCIONARIOS";
-        $logado = "Master";
-        return view('lista_funcionarios_cadastrados', compact('dados','nome','logado'));
+        return view('lista_funcionarios_cadastrados', compact('dados'));
     }
 
     public function EditarFuncionario($id) {
         $dados = funcionario::find($id);
         $titulo = "Editar funcionário";
-        $logado = "Master";
         return view('editar_funcionario', compact('dados', 'titulo', 'logado'));
     }
 
@@ -146,31 +144,36 @@ class master_controller extends Controller
 
         $funcionario->save();
 
-        return redirect('/ver_funcionarios')->with('success','Cadastro realizado com sucesso!');
+        return redirect('/ver_funcionarios');
     }
 
     public function ApagarFuncionario($id) {
-        //$logado = "Master";
         funcionario::destroy($id);
-        return redirect('/ver_funcionarios')->with('success','Funcionário apagado com sucesso!');
+        session()->flash('success','O funcionario foi excluído com sucesso!');
+        return redirect('/ver_funcionarios');
     }
 
     public function ver_doadores() {
-        $logado = "Master";
         $dados = doador::all();
-        return view('lista_cadastrados', compact('dados', 'logado'));
+        return view('lista_cadastrados', compact('dados'));
     }   
 
     public function EditarDoador($id) {
-        $logado = "Master";
         $dados = doador::where('id', $id)->first();
         $titulo = "Editar doador";
-        return view('editar_doador', compact('dados', 'titulo','logado'));
+        return view('editar_doador', compact('dados', 'titulo'));
     }
 
     public function ApagarDoador($id) {
         doador::destroy($id);
-        return redirect('/doadoresCadastrados')->with('success','Funcionário apagado com sucesso!');
+        if (session()->get('usuario')[0]['user'] === "d") {
+            session()->forget('user');
+            session()->forget('usuario');
+            session()->flash('success','Sua conta foi excluida com sucesso!');
+            return redirect('login_doador');
+        }
+        session()->flash('success','O Doador foi excluido com sucesso!.');
+        return redirect('/doadoresCadastrados');
     }
 
     public function AtualizarDoador(Request $requisicao) {

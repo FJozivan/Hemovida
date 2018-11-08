@@ -8,8 +8,8 @@
 		<div class="col-lg-12 col-sm-12 col-">
 			@if (session('success')!== null)
 			<div class="row text-center">
-				<div class="col-lg-3"></div>
-				<div class="col-lg-6">
+				<div class="col-lg-3 col-sm-1"></div>
+				<div class="col-lg-6 col-sm-10">
 					<div class="alert alert-success alert-dismissible fade show" role="alert"">
 							{{ session('success') }}
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close">

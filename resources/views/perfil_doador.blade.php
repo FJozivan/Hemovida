@@ -18,15 +18,22 @@
 							<div class="col-lg-12 mb-3">
 								<div class="row text-right">
 									<div class="col-lg-12 col-sm-12">
-										<a href="#" class="btn btn-warning btn-sm mt-2">Atualizar</a>
+									<a href="editar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-warning btn-sm mt-2">Editar Informações</a>
 										<span> </span>
-										<a href="#" class="btn btn-danger btn-sm mt-2">Excluir Conta</a>
+										<a href="/apagar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-danger btn-sm mt-2">Excluir Conta</a>
 									</div>
 								</div>
-								<div class="row text-center">	
-									<div class="col-lg-12 col-sm-12 mt-2 col-">
-										
-										<img class=" mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />	
+								<div class="row">
+									<div class="col-lg-3"></div>
+									<div class="col-lg-6 col-sm-12 mt-2 col- text-center">
+										<div class="col-lg-12 text-center">
+												<img class=" mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
+										</div>
+										<div class="col-lg-12"><strong>Nome:</strong> {{session()->get('user')[0]['nome']}}</div>
+										<div class="col-lg-12"><strong>Data de Nascimento: </strong> {{session()->get('user')[0]['data_nascimento']}}</div>
+										<div class="col-lg-12"><strong>Sexo</strong> {{session()->get('user')[0]['sexo']}}</div>
+										<div class="col-lg-12"><strong>E-mail</strong> {{session()->get('user')[0]['email']}}</div>
+										<div class="col-lg-12"><strong>Tipo Sanguineo</strong> {{session()->get('user')[0]['tipo_sanguineo']}}</div>
 										
 									</div>
 								</div>		
