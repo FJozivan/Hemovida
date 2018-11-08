@@ -53,10 +53,9 @@ class doadorController extends Controller
     	$doador->referencia = $requisicao->referencia;
     	$doador->tipo_sanguineo = $requisicao->tipo_sanguineo;
 
-    	//dd($doador);
-    	$doador->save(); 
-        //return ('cadastrado com sucesso!, volte a página.');
-        return redirect('/')->with('success','Cadastro realizado com sucesso!.');
+        $doador->save(); 
+        $requisicao->session()->flash('success','Você foi cadastrado com sucesso! Acesse sua conta.');
+        return redirect('login_doador');
     }
 
     public function Questionario() {

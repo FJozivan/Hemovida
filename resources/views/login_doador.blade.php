@@ -5,6 +5,19 @@
 @section('corpo')
 <div class="container" style="margin-top: 50px;">
     <div class="container">
+        @if (session('success')!== null)
+            <div class="row text-center">
+				<div class="col-lg-3 col-sm-1"></div>
+				<div class="col-lg-6 col-sm-10">
+					<div class="alert alert-success alert-dismissible fade show" role="alert"">
+							{{ session('success') }}
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+							</button>
+					</div>
+				</div>
+			</div>
+        @endif
         <div class="row">
             <div class="col-lg-12 col-sm-12 text-center">
                 <img class="mt-1 mb-5" src="./img/hemovida.png" class="img-fluid" style="margin:auto; width: 300px;" />

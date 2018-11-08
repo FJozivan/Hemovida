@@ -16,10 +16,13 @@ class appController extends Controller
     	$a = $requisicao->all();
     	$cont = 0;
     	foreach ($a as $ab => $value) {
-    		if($ab != '_token')
+    		if($ab != '_token'){
     			Mail::to("$value")->send(new emailHemovida());
-    			$cont++;
+				$cont++;
+			}
 		}
-		return back()->with('success','Funcionário cadastrado com sucesso!');
+		$requisicao->session()->flash('success',$cont.' Email(s) enviado(s) com sucesso!');
+		return redirect('/doadoresCadastrados');
+			
     }
 }
