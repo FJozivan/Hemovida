@@ -4,9 +4,9 @@
 @stop
 @section('corpo')
 @if (isset($success))
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		alert({{ $success }});
-	</script>
+	</script> -->
 	{{$success}}
 @endif
 <div class="container-fluid mb-5" style="background-color: #182E47; margin-top: 80px;">

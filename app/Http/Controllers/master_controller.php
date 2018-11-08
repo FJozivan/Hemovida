@@ -48,10 +48,9 @@ class master_controller extends Controller
 
                 //Session
                 $requisicao->session()->push('user', $dados_f);
-
-                $logado = $dados_f->nome;
-
-                //return view('inicio_apos_login_master', compact('titulo','logado'));
+                $requisicao->session()->push('usuario', [
+                    'user' => 'f'
+                ]);
                 return redirect('/doadoresCadastrados');
 
             }else{
@@ -67,10 +66,10 @@ class master_controller extends Controller
 
                 //Session
                 $requisicao->session()->push('user', $dados_m);
-
-                $logado = $dados_m->nome_master;
+                $requisicao->session()->push('usuario', [
+                    'user' => 'm'
+                ]);
                 return redirect('/doadoresCadastrados');
-                //return view('inicio_apos_login_master', compact('titulo','logado'));
 
             }else{
                 $titulo = "Login";
@@ -85,6 +84,7 @@ class master_controller extends Controller
 
         // Apaga dados da sessão;
         $requisicao->session()->forget('user');
+        $requisicao->session()->forget('usuario');
         return redirect('login_hemoce');
         //return "Deslogado";
     }
@@ -116,7 +116,6 @@ class master_controller extends Controller
         $funcionario->email = $requisicao->email;
         $funcionario->senha = md5($requisicao->senha);
 
-    	//dd($funcionario);
         $funcionario->save(); 
         return redirect('/ver_funcionarios')->with('success','Funcionário cadastrado com sucesso!');
     }

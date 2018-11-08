@@ -7,8 +7,10 @@ class homeController extends Controller
 {
     //
  
-    public function Home() {
+    public function Home(Request $requisicao) {
         $titulo = "O Hemoce";
+        $requisicao->session()->forget('user');
+        $requisicao->session()->forget('usuario');
         return view('home', compact('titulo'));
     }
 

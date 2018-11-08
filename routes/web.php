@@ -21,6 +21,7 @@ Route::post('testeCheck', 'homeController@testeCheck');
 // Login doador
 Route::get('login_doador', 'loginController@FazerLogin');
 Route::post('logar_doador', 'loginController@logar');//->middleware('login_doador');
+Route::get('logout_doador', 'loginController@logout');
 
 // Cadastro doador
 Route::get('/cadastro_doador', 'doadorController@CadastroDoador');
@@ -36,7 +37,7 @@ Route::get('questionario', 'doadorController@Questionario');
 // Hemoce
 Route::get('login_hemoce', 'master_controller@FazerLogin');
 Route::post('logar_hemoce', 'master_controller@logar');
-Route::get('logout', 'master_controller@logout');
+Route::get('logout_hemoce', 'master_controller@logout');
 
 Route::get('/doadoresCadastrados', 'master_controller@ver_doadores');
 

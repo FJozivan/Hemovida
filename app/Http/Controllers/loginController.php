@@ -47,14 +47,12 @@ class loginController extends Controller
                 //Session
                 $requisicao->session()->push('user', $dados);
 
-                //return view('', compact('titulo','logado'));
-                //return view('inicio_apos_login_doador', compact('dados'));
+                $requisicao->session()->push('usuario', [
+                    'user' => 'd'
+                ]);
+                return view('perfil_doador', compact('titulo','logado'));
 
-                // recuperar dados da session:
-                // $user = session->get('user')[0];
-                return view('inicio_apos_login_doador', compact('titulo','logado'));
-
-
+ 
             }else{
                 $titulo = "Login";
                 $erro2 = 'A senha deste usuario não confere!';
@@ -62,5 +60,13 @@ class loginController extends Controller
             }
         }
    
+    }
+
+    public function logout(Request $requisicao) {
+        // Apaga dados da sessão;
+        $requisicao->session()->forget('user');
+        $requisicao->session()->forget('usuario');
+        return redirect('login_doador');
+        //return "Deslogado";
     }
 }

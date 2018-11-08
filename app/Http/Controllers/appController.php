@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Mail;
 
 use App\Mail\emailHemovida;
@@ -18,8 +19,7 @@ class appController extends Controller
     		if($ab != '_token')
     			Mail::to("$value")->send(new emailHemovida());
     			$cont++;
-    	}
-    	//Mail::to("hemovidaifce@gmail.com")->send(new emailHemovida());
-		return ("Emails enviados com sucesso");
+		}
+		return back()->with('success','Funcionário cadastrado com sucesso!');
     }
 }

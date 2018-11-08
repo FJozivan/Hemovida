@@ -16,10 +16,17 @@
 					<div class="row">
 						<div class="container">
 							<div class="col-lg-12 mb-3">
+								<div class="row text-right">
+									<div class="col-lg-12 col-sm-12">
+										<a href="#" class="btn btn-warning btn-sm mt-2">Atualizar</a>
+										<span> </span>
+										<a href="#" class="btn btn-danger btn-sm mt-2">Excluir Conta</a>
+									</div>
+								</div>
 								<div class="row text-center">	
-									<div class="col-lg-6 col-sm-10 mt-2 col-">
+									<div class="col-lg-12 col-sm-12 mt-2 col-">
 										
-										{{-- Adicionar conteúdo --}}
+										<img class=" mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />	
 										
 									</div>
 								</div>		
