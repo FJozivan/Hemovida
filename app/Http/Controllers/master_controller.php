@@ -143,13 +143,13 @@ class master_controller extends Controller
         $funcionario->email = $requisicao->email;
 
         $funcionario->save();
-
+        session()->flash('success','O funcionário '.$requisicao->nome.' foi atualizado com sucesso!');
         return redirect('/ver_funcionarios');
     }
 
     public function ApagarFuncionario($id) {
         funcionario::destroy($id);
-        session()->flash('success','O funcionario foi excluído com sucesso!');
+        session()->flash('success','O funcionário foi excluído com sucesso!');
         return redirect('/ver_funcionarios');
     }
 
@@ -172,7 +172,7 @@ class master_controller extends Controller
             session()->flash('success','Sua conta foi excluida com sucesso!');
             return redirect('login_doador');
         }
-        session()->flash('success','O Doador foi excluido com sucesso!.');
+        session()->flash('success','O Doador foi excluido com sucesso!');
         return redirect('/doadoresCadastrados');
     }
 
@@ -195,7 +195,15 @@ class master_controller extends Controller
         $doador->tipo_sanguineo = $requisicao->tipo_sanguineo;
 
         $doador->save();
-        $logado = "Master";
-        return $this->ver_doadores();
+        
+        if (session()->get('usuario')[0]['user'] === "d") {
+            $dados = doador::where('id', $requisicao->id)->first();
+            $requisicao->session()->forget('user');
+            $requisicao->session()->push('user', $dados);
+            $requisicao->session()->flash('success','Seu cadastro foi atualizado com sucesso!');
+            return redirect('perfil_doador');
+        }
+        session()->flash('success','O Doador '.$requisicao->nome.' foi atualizado com sucesso!');
+        return redirect('/doadoresCadastrados');
     }
 }   

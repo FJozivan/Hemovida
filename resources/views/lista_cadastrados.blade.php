@@ -43,7 +43,9 @@
 					</div>
 					<div class="row">
 						<div class="container">
+						@if(isset($dados))
 							<div class="col-lg-12 mb-3">
+								
 								<form action="enviar_mail" class="mt-3 mb-3 ml-5 mr-5" method="post">
 									@csrf
 									<div class="table-responsive">
@@ -88,8 +90,11 @@
 
 									</div>
 									<button type="submit" class="btn btn-warning" style="font-weight: bold; font-size: 16px;" id="email">Enviar Email</button>
-								</form>								
+								</form>					
 							</div>
+							@else
+							<div class="col-lg-12 mb-3 text-center"><i class='far fa-eye-slash' style='font-size:48px'></i></div>
+							@endif
 						</div>
 					</div>
 					<!-- </div> -->

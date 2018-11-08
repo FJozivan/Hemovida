@@ -27,6 +27,7 @@
 			@endif
 			<div class="container" style="background-color: white; border-radius: 10px; box-shadow: 0px 0px 0px 0.4px;">
 				<div class="container">
+					
 					<div class="row">
 						<div class="col-xl-12">
 							<center>
@@ -37,44 +38,47 @@
 							</center>
 						</div>
 					</div>
-
-					<div class="row">
-						<div class="container">
-							<div class="col-lg-12 mb-3">
-								<div class="table-responsive">
-									<table class="table">
-										<thead>
-											<tr>
-												<th>Nome</th>
-												<th>Email</th>
-												<th>Ações</th>
-											</tr>
-										</thead>
-										<tbody>
-											
-												@foreach ($dados as $dado)
+					@if($dados !== null)
+						<div class="row">
+							<div class="container">
+								<div class="col-lg-12 mb-3">
+									<div class="table-responsive">
+										<table class="table">
+											<thead>
 												<tr>
-													<td>{{ $dado->nome }}</td>
-													<td>{{ $dado->email }}</td>
-													<td>
-														{{-- Editar funcionario --}}
-														<a href="/editar_funcionario/{{ $dado->id }}">Visualizar</a>
-														<span> / </span>
-														{{-- Apagar funcionario --}}
-														<a href="/apagar_funcionario/{{ $dado->id }}" class="btn btn-danger btn-sm" >Deletar</a>
-													</td>
+													<th>Nome</th>
+													<th>Email</th>
+													<th>Ações</th>
 												</tr>
+											</thead>
+											<tbody>
+												
+													@foreach ($dados as $dado)
+													<tr>
+														<td>{{ $dado->nome }}</td>
+														<td>{{ $dado->email }}</td>
+														<td>
+															{{-- Editar funcionario --}}
+															<a href="/editar_funcionario/{{ $dado->id }}">Visualizar</a>
+															<span> / </span>
+															{{-- Apagar funcionario --}}
+															<a href="/apagar_funcionario/{{ $dado->id }}" class="btn btn-danger btn-sm" >Deletar</a>
+														</td>
+													</tr>
 
-												@endforeach	
-										</tbody>
-									</table>	
-								</div>								
+													@endforeach	
+											</tbody>
+										</table>	
+									</div>								
+								</div>
 							</div>
 						</div>
-					</div>
-					</div>
-				</div>		
-			</div>
+					@else
+						<div class="col-lg-12 mb-3 text-center"><i class='far fa-eye-slash' style='font-size:48px'></i></div>
+					@endif
+				</div>
+			</div>		
 		</div>
 	</div>
+</div>
 	@stop
