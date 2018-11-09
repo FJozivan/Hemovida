@@ -55,7 +55,7 @@ class doadorController extends Controller
 
         $doador->save(); 
         $requisicao->session()->flash('success','Você foi cadastrado com sucesso! Acesse sua conta.');
-        return redirect('login_doador');
+        return redirect('/login_doador');
     }
 
     public function Questionario() {

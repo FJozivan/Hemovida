@@ -31,7 +31,7 @@
 							<div class="col-lg-12 mb-3">
 								<div class="row text-right">
 									<div class="col-lg-12 col-sm-12">
-									<a href="editar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-warning btn-sm mt-2">Editar Informações</a>
+									<a href="/editar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-warning btn-sm mt-2">Editar Informações</a>
 										<span> </span>
 										<a href="/apagar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-danger btn-sm mt-2">Excluir Conta</a>
 									</div>

@@ -61,9 +61,9 @@
 							</button>
 							<div class="dropdown-menu">
 								@if(session()->get('usuario')[0]['user'] === "m" || session()->get('usuario')[0]['user'] === "f")
-									<a class="dropdown-item" href="logout_hemoce">Logout</a>
+									<a class="dropdown-item" href="/logout_hemoce">Logout</a>
 								@elseif(session()->get('usuario')[0]['user'] == "d")
-									<a class="dropdown-item" href="logout_doador">Logout</a>
+									<a class="dropdown-item" href="/logout_doador">Logout</a>
 								@endif
 							</div>
 						</div>

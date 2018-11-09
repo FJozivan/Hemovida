@@ -40,7 +40,7 @@
         </button>
     </div>
     @endif
-    <form action="logar_hemoce" class="mt-3 mb-3 ml-5 mr-5" method="post">
+    <form action="/logar_hemoce" class="mt-3 mb-3 ml-5 mr-5" method="post">
         @csrf
 
         <div class="form-group">
@@ -53,7 +53,7 @@
         </div>
         <div class="text-center mt-2">
                
-                <a href="login_doador" class="btn btn-success btn-sm mr-2"><img class="" style="width: 20px" src="./img/power.svg"> Doador</a>
+                <a href="/login_doador" class="btn btn-success btn-sm mr-2"><img class="" style="width: 20px" src="./img/power.svg"> Doador</a>
 
                 <a href="#" class="btn btn-light disabled btn-sm ml-2"><img class="" style="width: 20px" src="./img/power.svg"> Hemoce</a>
         </div>

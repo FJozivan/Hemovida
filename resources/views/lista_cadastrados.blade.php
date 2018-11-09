@@ -46,7 +46,7 @@
 						@if(isset($dados))
 							<div class="col-lg-12 mb-3">
 								
-								<form action="enviar_mail" class="mt-3 mb-3 ml-5 mr-5" method="post">
+								<form action="/enviar_mail" class="mt-3 mb-3 ml-5 mr-5" method="post">
 									@csrf
 									<div class="table-responsive">
 

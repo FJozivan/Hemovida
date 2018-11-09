@@ -67,7 +67,7 @@ class loginController extends Controller
         // Apaga dados da sessão;
         $requisicao->session()->forget('user');
         $requisicao->session()->forget('usuario');
-        return redirect('login_doador');
+        return redirect('/login_doador');
         //return "Deslogado";
     }
 

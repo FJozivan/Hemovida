@@ -85,7 +85,7 @@ class master_controller extends Controller
         // Apaga dados da sessão;
         $requisicao->session()->forget('user');
         $requisicao->session()->forget('usuario');
-        return redirect('login_hemoce');
+        return redirect('/login_hemoce');
         //return "Deslogado";
     }
     // Cadastro de funcionarios
@@ -170,7 +170,7 @@ class master_controller extends Controller
             session()->forget('user');
             session()->forget('usuario');
             session()->flash('success','Sua conta foi excluida com sucesso!');
-            return redirect('login_doador');
+            return redirect('/login_doador');
         }
         session()->flash('success','O Doador foi excluido com sucesso!');
         return redirect('/doadoresCadastrados');

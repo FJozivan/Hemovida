@@ -41,7 +41,7 @@
 										</ul>
 									</div>
 									@endif --}}
-									<form method="POST" action="cadastrar_doador">
+									<form method="POST" action="/cadastrar_doador">
 										@csrf
 										
 										<div class="container font">

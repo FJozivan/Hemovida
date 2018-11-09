@@ -48,7 +48,7 @@
 								@endif
 								@endif --}}
 								
-								<form method="post" action="cadastrar_funcionario">
+								<form method="post" action="/cadastrar_funcionario">
 									@csrf
 
 									<div class="container font">

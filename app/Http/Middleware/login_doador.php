@@ -19,7 +19,7 @@ class login_doador
 
             return $next($request);
        }else {
-           return redirect('login_doador');
+           return redirect('/login_doador');
        }
 
         

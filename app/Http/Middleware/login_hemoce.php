@@ -19,7 +19,7 @@ class login_hemoce
 
             return $next($request);
         }else {
-            return redirect('login_hemoce');
+            return redirect('/login_hemoce');
      }
  }
 }
