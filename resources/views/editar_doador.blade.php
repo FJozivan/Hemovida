@@ -41,13 +41,31 @@
 										</ul>
 									</div>
 									@endif --}}
-									<form method="POST" action="/atualizar_doador">
+									<form method="POST" action="/atualizar_doador" enctype="multipart/form-data">
 										@csrf
 										
 										{{-- Id do funcionario --}}
 										<input type="hidden" name="id" value="{{$dados->id}}">
 
 										<div class="container font">
+											<div class="col-lg-12 col-sm-12">
+												<p style="margin-left: -25px;">IMAGEM</p>
+											</div>
+
+											<div class="form-group row text-center">
+												<div class="col-lg-12">
+													@if(session()->get('user')[0]['image']!=='none')
+														<img class=" mb-3" src="{{url('storage/doadores/'.session()->get('user')[0]['image'])}}" class="img-fluid" style="margin:auto; width: 100px; border-radius: 100px; margin-top: 0px; box-shadow: 0px 0px 1px;width: 125px; height: 125px" />
+													@else
+														<p>Sem foto</p>
+													@endif
+												</div>
+												<label for="image" class="mt-2"><strong>Alterar imagem:</strong></label>
+												<div class="col-lg-6 col-sm-10">
+													<input type="file" class="form-control" id="image" name="image">
+												</div>
+											</div>
+
 											<div class="col-lg-12 col-sm-12">
 												<p style="margin-left: -25px;">IDENTIFICAÇÃO</p>
 											</div>

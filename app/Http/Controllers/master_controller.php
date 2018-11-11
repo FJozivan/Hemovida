@@ -177,7 +177,20 @@ class master_controller extends Controller
     }
 
     public function AtualizarDoador(Request $requisicao) {
-            
+        
+        if ($requisicao->hasFile('image') && $requisicao->file('image')->isValid()) {
+            if ($requisicao->session()->get('user')[0]['image']!=='none'){
+                $name_file = $requisicao->session()->get('user')[0]['image'];
+            }else{
+                $name = "doador_".$requisicao->session()->get('user')[0]['id'];
+                $extention = $requisicao->image->extension();
+                $name_file = "{$name}.{$extention}";
+            }
+                
+            //dd($name_file);
+            $requisicao->image->storeAs('doadores', $name_file);
+           // $requisicao->image->
+        }    
         $doador = doador::find($requisicao->id);
         $doador->nome = $requisicao->nome;
         $doador->sobrenome = $requisicao->sobrenome;
@@ -193,9 +206,10 @@ class master_controller extends Controller
         $doador->cidade = $requisicao->cidade;
         $doador->referencia = $requisicao->referencia;
         $doador->tipo_sanguineo = $requisicao->tipo_sanguineo;
+        $doador->image = $name_file;
 
         $doador->save();
-        
+
         if (session()->get('usuario')[0]['user'] === "d") {
             $dados = doador::where('id', $requisicao->id)->first();
             $requisicao->session()->forget('user');
@@ -203,6 +217,7 @@ class master_controller extends Controller
             $requisicao->session()->flash('success','Seu cadastro foi atualizado com sucesso!');
             return redirect('perfil_doador');
         }
+
         session()->flash('success','O Doador '.$requisicao->nome.' foi atualizado com sucesso!');
         return redirect('/doadoresCadastrados');
     }

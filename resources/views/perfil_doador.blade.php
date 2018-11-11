@@ -39,8 +39,12 @@
 								<div class="row">
 									<div class="col-lg-3"></div>
 									<div class="col-lg-6 col-sm-12 mt-2 col- text-center">
-										<div class="col-lg-12 text-center">
-												<img class=" mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
+										<div class="row text-center">
+											@if(session()->get('user')[0]['image']!=='none')
+												<img class=" mb-3" src="{{url('storage/doadores/'.session()->get('user')[0]['image'])}}" class="img-fluid" style="margin:auto; width: 100px; border-radius: 100px; margin-top: 0px; box-shadow: 0px 0px 1px;width:125px;height: 125px" />
+											@else
+											<img class=" mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
+											@endif
 										</div>
 										<div class="col-lg-12"><strong>Nome:</strong> {{session()->get('user')[0]['nome']}}</div>
 										<div class="col-lg-12"><strong>Data de Nascimento: </strong> {{session()->get('user')[0]['data_nascimento']}}</div>

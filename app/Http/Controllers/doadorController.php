@@ -51,7 +51,8 @@ class doadorController extends Controller
     	$doador->bairro = $requisicao->bairro;
     	$doador->cidade = $requisicao->cidade;
     	$doador->referencia = $requisicao->referencia;
-    	$doador->tipo_sanguineo = $requisicao->tipo_sanguineo;
+        $doador->tipo_sanguineo = $requisicao->tipo_sanguineo;
+        $doador->image = $requisicao->image;
 
         $doador->save(); 
         $requisicao->session()->flash('success','Você foi cadastrado com sucesso! Acesse sua conta.');

@@ -43,7 +43,7 @@
 									@endif --}}
 									<form method="POST" action="/cadastrar_doador">
 										@csrf
-										
+										<input type="hidden" id="image" name="image" value="none">
 										<div class="container font">
 											<div class="col-lg-12 col-sm-12">
 												<p style="margin-left: -25px;">IDENTIFICAÇÃO</p>

@@ -34,6 +34,8 @@ class CreateTableDoador extends Migration
 
             $table->string('cep',20);
 
+            $table->string('image',30);
+
             $table->string('rua',45)->nullable($value = false);
 
             $table->string('cidade',45)->nullable($value = false);
