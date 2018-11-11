@@ -6,8 +6,9 @@
 @extends('layouts.cabecalho')
 @stop
 @section('corpo')
-<div class="container" style="background-color: white; border-radius: 10px; box-shadow: 0px 0px 0px 0.4px; padding: 20px; margin-top: 10px; margin-bottom: 10px;">
-    <div class="row mt-5">
+<div class="mt-3">s</div>
+<div class="container mt-4">
+    <div class="row ml-1 mr-1" style="background-color: white; border-radius: 5px; box-shadow: 0px 0px 0px 0.4px; padding: 15px;">
 
         <div class="text-justify col-lg-8 col-sm-12">
             <span>
@@ -19,7 +20,7 @@
         <div class="col-lg-4 col-sm-12">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
-                    <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div id="demo" class="carousel slide mt-3" data-ride="carousel">
 
                         <!-- Indicators -->
                         <ul class="carousel-indicators">
@@ -56,7 +57,7 @@
         
     </div>
 
-    <div class="row mt-5">
+    <div class="row mt-2 ml-1 mr-1" style="background-color: white; border-radius: 5px; box-shadow: 0px 0px 0px 0.4px; padding: 15px;">
         <div class="mt-4 col-lg-4 col-sm-12">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
