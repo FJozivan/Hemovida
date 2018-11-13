@@ -16,13 +16,13 @@
         <div class="row justify-content-around col-sm-6">
             <h5 class="col-sm-12" style="text-align: center; margin-bottom: 20px;"><em><strong>Desenvolvedores:</strong></em></h5>
             <div class="card col-sm-5" style="width: 18rem;">
-                <img class="card-img-top" src="./img/icone.jpg" alt="Jozivan">
+                <img class="card-img-top" src="./img/jozivan.gif" alt="Jozivan">
                 <div class="card-body">
                     <p class="card-text" style="text-align: center;"><strong>Jozivan</strong></p>
                 </div>
             </div>
             <div class="card col-sm-5" style="width: 18rem;">
-                <img class="card-img-top" src="./img/icone.jpg" alt="Aderbal">
+                <img class="card-img-top" src="./img/aderbal.gif" alt="Aderbal">
                 <div class="card-body">
                     <p class="card-text" style="text-align: center;"><strong>Aderbal</strong></p>
                 </div>
@@ -31,13 +31,13 @@
         <div class="row justify-content-around col-sm-6">
             <h5 class="col-sm-12" style="text-align: center; margin-bottom: 20px;"><em><strong>Testadores:</strong></em></h5>
             <div class="card col-sm-5" style="width: 18rem;">
-                <img class="card-img-top" src="./img/icone.jpg" alt="Daniele Bernardo">
+                <img class="card-img-top" src="./img/daniele.gif" alt="Daniele Bernardo">
                 <div class="card-body">
                     <p class="card-text" style="text-align: center;"><strong>Daniele Bernardo</strong></p>
                 </div>
             </div>
             <div class="card col-sm-5" style="width: 18rem;">
-                <img class="card-img-top" src="./img/icone.jpg" alt="Alex Nascimento">
+                <img class="card-img-top" src="./img/alex.gif" alt="Alex Nascimento">
                 <div class="card-body">
                     <p class="card-text" style="text-align: center;"><strong>Alex Nascimento</strong></p>
                 </div>
@@ -47,13 +47,13 @@
         <div class="row justify-content-around col-sm-6">
             <h5 class="col-sm-12" style="text-align: center; margin-bottom: 20px;"><em><strong>Designers:</strong></em></h5>
             <div class="card col-sm-5" style="width: 18rem;">
-                <img class="card-img-top" src="./img/icone.jpg" alt="Ricardo Saraiva">
+                <img class="card-img-top" src="./img/ricardo.gif" alt="Ricardo Saraiva">
                 <div class="card-body">
                     <p class="card-text" style="text-align: center;"><strong>Ricardo Saraiva</strong></p>
                 </div>
             </div>
             <div class="card col-sm-5" style="width: 18rem;">
-                <img class="card-img-top" src="./img/icone.jpg" alt="Vinícius">
+                <img class="card-img-top" src="./img/vinicius.gif" alt="Vinícius">
                 <div class="card-body">
                     <p class="card-text" style="text-align: center;"><strong>Vinícius</strong></p>
                 </div>
@@ -62,7 +62,7 @@
         <div class="row justify-content-around col-sm-6">
             <h5 class="col-sm-12" style="text-align: center; margin-bottom: 20px;"><em><strong>Analista:</strong></em></h5>
             <div class="card col-sm-5" style="width: 18rem;">
-                <img class="card-img-top" src="./img/icone.jpg" alt="Silvia">
+                <img class="card-img-top" src="./img/silvia.gif" alt="Silvia">
                 <div class="card-body">
                     <p class="card-text" style="text-align: center;"><strong>Silvia</strong></p>
                 </div>
@@ -72,7 +72,7 @@
         <div class="row justify-content-around col-sm-12">
             <h5 class="col-sm-12" style="text-align: center; margin-bottom: 20px;"><em><strong>Gerente:</strong></em></h5>
             <div class="card col-sm-3" style="width: 18rem;">
-                <img class="card-img-top" src="./img/icone.jpg" alt="Hilderlania">
+                <img class="card-img-top" src="./img/hilderlania.gif" alt="Hilderlania">
                 <div class="card-body">
                     <p class="card-text" style="text-align: center;"><strong>Hilderlania</strong></p>
                 </div>
