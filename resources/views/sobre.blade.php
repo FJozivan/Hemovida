@@ -6,7 +6,8 @@
 @extends('layouts.cabecalho')
 @stop
 @section('corpo')
-<div class="container" style="background-color: white; border-radius: 10px; box-shadow: 0px 0px 0px 0.4px; margin-top: 10px; margin-bottom: 10px;">
+<div class="mt-3" style="color: transparent">.</div>
+<div class="container mt-4" style="background-color: white; border-radius: 10px; box-shadow: 0px 0px 0px 0.4px; margin-top: 10px; margin-bottom: 10px;">
     <div class="row" style="padding: 20px;">
         <h2 class="col-sm-12" style="color: #3232ff; text-align: center;"><strong>Sobre Nós</strong></h2>
         <p class="col-sm-12" style="margin-top: 20px;">O hemovida tem o intuito de aproximar os doadores do Hemoce, assim facilitando o contato com os novos e velhos doadores do instituto do Hemoce.</p>

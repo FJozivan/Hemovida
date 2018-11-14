@@ -6,7 +6,7 @@
 @extends('layouts.cabecalho')
 @stop
 @section('corpo')
-<div class="mt-3">s</div>
+<div class="mt-3" style="color: transparent">s</div>
 <div class="container mt-4">
     <div class="ml-1 mr-1 mb-3">
         <div class="row" style="background-color: white; border-radius: 5px; box-shadow: 0px 0px 0px 0.4px; padding: 15px;">
