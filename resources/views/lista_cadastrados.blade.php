@@ -11,10 +11,10 @@
 				<div class="col-lg-3 col-sm-1"></div>
 				<div class="col-lg-6 col-sm-10">
 					<div class="alert alert-success alert-dismissible fade show" role="alert"">
-							{{ session('success') }}
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
+						{{ session('success') }}
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -43,7 +43,7 @@
 					</div>
 					<div class="row">
 						<div class="container">
-						@if(isset($dados))
+							@if(isset($dados))
 							<div class="col-lg-12 mb-3">
 								
 								<form action="/enviar_mail" class="mt-3 mb-3 ml-5 mr-5" method="post">
@@ -54,6 +54,7 @@
 											<thead>
 												<tr>
 													<th>Selecione</th>
+													<th>Foto</th>
 													<th>Nome</th>
 													<th>Tipo San</th>
 													<th>Email</th>
@@ -70,7 +71,14 @@
 
 														</div>
 													</td>
-													<td>{{ $dado->nome }}</td>
+													<td>
+														@if($dado->image!=='none')
+														<img class=" mb-3" src="{{url('storage/doadores/'.$dado->image)}}" class="img-fluid" style="margin:auto; width: 100px; border-radius: 100px; margin-top: 0px; box-shadow: 0px 0px 1px;width:50px;height: 50px" />
+														@else
+														<img class="mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; 	height:100px;border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
+														@endif
+														</td>
+														<td>{{ $dado->nome }}</td>
 													<td>{{$dado->tipo_sanguineo}}</td>
 													<td>{{ $dado->email }}</td>
 													<td>
@@ -117,26 +125,26 @@
 		});
 	</script>
 	<script>
-			$(document).ready(function(){
-				$("#myInput").on("keyup", function() {
-					var value = $(this).val().toLowerCase();
-					$("#myTable tr").filter(function() {
-						$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-					});
+		$(document).ready(function(){
+			$("#myInput").on("keyup", function() {
+				var value = $(this).val().toLowerCase();
+				$("#myTable tr").filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 				});
 			});
+		});
 
 			// 'var buttonDeletar = document.getElementById('deletar');
 						// buttonDeletar.onclick = function(){
 						// 	confirm("deseja realmente apagar o doador?");
 						// };'
-				var buttonEmail = document.getElementById('email');
-				function habilidaDisable(){
-					buttonEmail.disabled = true;
-				}
+						var buttonEmail = document.getElementById('email');
+						function habilidaDisable(){
+							buttonEmail.disabled = true;
+						}
 
-				function desabilidaDisable(){
-					buttonEmail.disabled = false;
-				}
-		</script>
-	@stop
+						function desabilidaDisable(){
+							buttonEmail.disabled = false;
+						}
+					</script>
+					@stop

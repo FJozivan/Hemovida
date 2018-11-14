@@ -27,8 +27,10 @@
 				<!-- <div class="container"> -->
 					{{-- {{dd(session()->get('user'))}} --}}
 					<div class="row">
+
 						<div class="container">
-							<div class="col-lg-12 mb-3">
+							<div class="col-lg-12 col-sm-12 text-center p-2" style="font-family: 'Raleway', sans-serif;"><h5>Perfil doador</h5></div>
+							<div class="col-lg-12 col-sm-12 mb-3">
 								<div class="row text-right">
 									<div class="col-lg-12 col-sm-12">
 									<a href="/editar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-warning btn-sm mt-2">Editar Informações</a>
@@ -38,20 +40,56 @@
 								</div>
 								<div class="row">
 									<div class="col-lg-3"></div>
-									<div class="col-lg-6 col-sm-12 mt-2 col- text-center">
+									<div class="col-lg-6 col-sm-12 mt-2 col- text-center" >
 										<div class="row text-center">
 											@if(session()->get('user')[0]['image']!=='none')
 												<img class=" mb-3" src="{{url('storage/doadores/'.session()->get('user')[0]['image'])}}" class="img-fluid" style="margin:auto; width: 100px; border-radius: 100px; margin-top: 0px; box-shadow: 0px 0px 1px;width:125px;height: 125px" />
 											@else
-											<img class=" mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
+												<img class="mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; 	height:100px;border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
 											@endif
 										</div>
-										<div class="col-lg-12"><strong>Nome:</strong> {{session()->get('user')[0]['nome']}}</div>
-										<div class="col-lg-12"><strong>Data de Nascimento: </strong> {{session()->get('user')[0]['data_nascimento']}}</div>
-										<div class="col-lg-12"><strong>Sexo</strong> {{session()->get('user')[0]['sexo']}}</div>
-										<div class="col-lg-12"><strong>E-mail</strong> {{session()->get('user')[0]['email']}}</div>
-										<div class="col-lg-12"><strong>Tipo Sanguineo</strong> {{session()->get('user')[0]['tipo_sanguineo']}}</div>
+										<div class="row">
+											<div class="col-lg-3 col-sm-0">
+												
+											</div>
+											<table>
+											<tbody style="font-family: 'Raleway', sans-serif;">
+												<tr>
+													<th>Nome:</th>
+													<td>&nbsp {{session()->get('user')[0]['nome']}}</td>
+												</tr>
+												<tr>
+													<th>Idade:</th>
+													<td>&nbsp {{ date("Y") - date("Y", strtotime(session()->get('user')[0]['data_nascimento']))}}</td>
+												</tr>
+												<tr>
+													<th>Sexo:</th>
+													<td>
+														@if (session()->get('user')[0]['sexo'] === 'm')
+															<span>&nbsp Masculino</span>
+														@else
+															<span>&nbsp Feminino</span>
+														@endif
+													</td>
+												</tr>
+												<tr>
+													<th>E-mail:</th>
+													<td>&nbsp {{session()->get('user')[0]['email']}}</td>
+												</tr>
+												<tr>
+													<th>Tipo sanguineo:</th>
+													<td> <h4>&nbsp {{session()->get('user')[0]['tipo_sanguineo']}}</h4></td>
+												</tr>
+											</tbody>
+										</table>	
+										</div>
 										
+										{{-- <div class="col-lg-12 col-sm-12 text-justify" style="font-family: 'Raleway', sans-serif;"><strong>Nome:</strong> {{session()->get('user')[0]['nome']}}</div>
+										<div class="col-lg-12 col-sm-12 text-justify" style="font-family: 'Raleway', sans-serif;"><strong>Data de Nascimento: </strong> {{date("d-m-Y", strtotime(session()->get('user')[0]['data_nascimento']))}}</div>
+										<div class="col-lg-12 col-sm-12 text-justify" style="font-family: 'Raleway', sans-serif;"><strong>Sexo:</strong> {{session()->get('user')[0]['sexo']}}</div>
+										<div class="col-lg-12 col-sm-12 text-justify" style="font-family: 'Raleway', sans-serif;"><strong>E-mail:</strong> {{session()->get('user')[0]['email']}}</div>
+										<div class="col-lg-12 col-sm-12 text-justify" style="font-family: 'Raleway', sans-serif;"><strong>Tipo Sanguineo:</strong> {{session()->get('user')[0]['tipo_sanguineo']}}</div>
+										 --}}
 									</div>
 								</div>		
 							</div>

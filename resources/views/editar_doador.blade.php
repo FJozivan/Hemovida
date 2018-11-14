@@ -15,7 +15,13 @@
 						<div class="col-xl-12">
 							<center>
 								<h5 style="margin-top: 20px; font-family: 'Raleway', sans-serif; color: red;">
-									MEU CADASTRO
+									@if (session()->get('usuario')[0]['user'] !== 'd')
+										Editar Doador
+									@else
+										Meu Cadastro
+									@endif
+
+									
 								</h5>
 								<hr style="background-color: red; margin-top: 5px">
 							</center>
@@ -52,19 +58,23 @@
 												<p style="margin-left: -25px;">IMAGEM</p>
 											</div>
 
+											@if (session()->get('usuario')[0]['user'] === 'd')
 											<div class="form-group row text-center">
 												<div class="col-lg-12">
-													@if(session()->get('user')[0]['image']!=='none')
-														<img class=" mb-3" src="{{url('storage/doadores/'.session()->get('user')[0]['image'])}}" class="img-fluid" style="margin:auto; width: 100px; border-radius: 100px; margin-top: 0px; box-shadow: 0px 0px 1px;width: 125px; height: 125px" />
-													@else
-														<p>Sem foto</p>
-													@endif
+													
+														@if(session()->get('user')[0]['image']!=='none')
+								 						<img class=" mb-3" src="{{url('storage/doadores/'.session()->get('user')[0]['image'])}}" class="img-fluid" style="margin:auto; width: 100px; border-radius: 100px; margin-top: 0px; box-shadow: 0px 0px 1px;width: 125px; height: 125px" />
+														@else
+															<p>Sem foto</p>
+														@endif
+													
 												</div>
 												<label for="image" class="mt-2"><strong>Alterar imagem:</strong></label>
 												<div class="col-lg-6 col-sm-10">
 													<input type="file" class="form-control" id="image" name="image">
 												</div>
 											</div>
+											@endif
 
 											<div class="col-lg-12 col-sm-12">
 												<p style="margin-left: -25px;">IDENTIFICAÇÃO</p>

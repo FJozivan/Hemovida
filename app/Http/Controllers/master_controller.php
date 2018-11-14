@@ -177,7 +177,7 @@ class master_controller extends Controller
     }
 
     public function AtualizarDoador(Request $requisicao) {
-        
+        $name_file = null;
         if ($requisicao->hasFile('image') && $requisicao->file('image')->isValid()) {
             if ($requisicao->session()->get('user')[0]['image']!=='none'){
                 $name_file = $requisicao->session()->get('user')[0]['image'];
@@ -206,7 +206,12 @@ class master_controller extends Controller
         $doador->cidade = $requisicao->cidade;
         $doador->referencia = $requisicao->referencia;
         $doador->tipo_sanguineo = $requisicao->tipo_sanguineo;
-        $doador->image = $name_file;
+        if ($name_file === null) {
+            $doador->image = 'none';
+        }else{
+            $doador->image = $name_file;    
+        }
+        
 
         $doador->save();
 
