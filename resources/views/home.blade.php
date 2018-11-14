@@ -39,7 +39,7 @@
                                     <img class="img-fluid" style="border-radius: 5px;" src="./img/hemoce inauguracao - Copia.jpg"/>
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="img-fluid" style="border-radius: 5px;" src="./img/Hemoce Crato.jpg"/>
+                                    <img class="img-fluid" style="border-radius: 5px;" src="./img/hemoce_2.jpg"/>
                                 </div>
                             </div>
                             
@@ -74,13 +74,13 @@
                             <!-- The slideshow -->
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="img-fluid" style="border-radius: 5px;" src="./img/Hemoce Crato.jpg"/>
+                                    <img class="img-fluid" style="border-radius: 5px;" src="./img/hemoce_4.jpg"/>
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="img-fluid" style="border-radius: 5px;" src="./img/Hemoce Crato.jpg"/>
+                                    <img class="img-fluid" style="border-radius: 5px;" src="./img/hemoce_3.png"/>
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="img-fluid" style="border-radius: 5px;" src="./img/Hemoce Crato.jpg"/>
+                                    <img class="img-fluid" style="border-radius: 5px;" src="./img/hemoce_5.jpg"/>
                                 </div>
                             </div>
                             
