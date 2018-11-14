@@ -75,7 +75,7 @@
 														@if($dado->image!=='none')
 														<img class=" mb-3" src="{{url('storage/doadores/'.$dado->image)}}" class="img-fluid" style="margin:auto; width: 100px; border-radius: 100px; margin-top: 0px; box-shadow: 0px 0px 1px;width:50px;height: 50px" />
 														@else
-														<img class="mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; 	height:100px;border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
+														<img class="mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 50px; 	height:50px;border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
 														@endif
 														</td>
 														<td>{{ $dado->nome }}</td>
