@@ -54,11 +54,12 @@
 										<input type="hidden" name="id" value="{{$dados->id}}">
 
 										<div class="container font">
+											
+
+											@if (session()->get('usuario')[0]['user'] === 'd')
 											<div class="col-lg-12 col-sm-12">
 												<p style="margin-left: -25px;">IMAGEM</p>
 											</div>
-
-											@if (session()->get('usuario')[0]['user'] === 'd')
 											<div class="form-group row text-center">
 												<div class="col-lg-12">
 													
