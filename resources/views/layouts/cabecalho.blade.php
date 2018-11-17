@@ -13,10 +13,10 @@
 			@if (session()->get('usuario')[0]['user'] === null)
 				
 				<li class="nav-item">
-					<a class="nav-link" href="/">O Hemoce</a>
+					<a class="nav-link" href="/hemoce">O Hemoce</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Doador</a>
+					<a class="nav-link" href="/">Doador</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Benefícios</a>
