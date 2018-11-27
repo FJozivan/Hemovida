@@ -19,7 +19,7 @@
     </div>
     <div class="row mr-2 ml-2 mt-4">
         <h2 class="col-sm-12" style="text-align: center; color: #3232ff;">Quem doa para quem?</h2>
-        <img class="img-fluid col-sm-12" style="max-height: 400px; margin-top: 20px; border-radius: 5px; display: block; margin-left: auto; margin-right: auto;" src="./img/doacao.png"/>
+        <img class="img-fluid col-sm-9" style="max-height: 400px; margin-top: 20px; border-radius: 5px; display: block; margin-left: auto; margin-right: auto;" src="./img/doacao.png"/>
     </div>
     <div class="row mr-2 ml-2 mt-4">
         <h2 class="col-sm-12" style="text-align: center; color: #3232ff;">Impedimentos temporários</h2>
