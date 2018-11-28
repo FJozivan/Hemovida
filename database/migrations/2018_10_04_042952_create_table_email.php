@@ -16,7 +16,7 @@ class CreateTableEmail extends Migration
         Schema::create('emails', function (Blueprint $table) {
             
             //Minhas colunas
-            $table->increments('id_email');
+            $table->increments('id');
             $table->string('corpo_email',45)->nullable($value = false);
             $table->string('assunto_email',100);
             $table->integer('id_funcionario')->unsigned();

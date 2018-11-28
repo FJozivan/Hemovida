@@ -16,12 +16,12 @@ class CreateTablePerguntaFormulario extends Migration
         Schema::create('pergunta_formularios', function (Blueprint $table) {
             
             //Minhas colunas
-            $table->increments('id_pergunta');
+            $table->increments('id');
             $table->string('corpo_pergunta',500)->nullable($value = false);
             $table->integer('id_formulario')->unsigned();
             
             //Relação com tabelas
-            $table->foreign('id_formulario')->references('id_formulario')->on('formularios');
+            $table->foreign('id_formulario')->references('id')->on('formularios');
             
             //colunas padrão laravel
             $table->timestamps();

@@ -33,8 +33,15 @@
 							<div class="col-lg-12 col-sm-12 mb-3">
 								<div class="row text-right">
 									<div class="col-lg-12 col-sm-12">
-									<a href="/editar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-warning btn-sm mt-2">Editar Informações</a>
-										<span> </span>
+									<a href="{{session()->get('user')[0]['quetionarioRespondido'] === 0 ? '/questionario' : '#'}}" class="btn btn-secondary btn-sm mt-2" aria-disabled="true">Questionarios 
+												
+										@if (session()->get('user')[0]['quetionarioRespondido'] === 0)
+													<span class="badge badge-warning">1</span>	
+												@endif
+												
+
+											</a>
+										<a href="/editar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-info btn-sm mt-2">Editar Informações</a>
 										<a href="/apagar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-danger btn-sm mt-2">Excluir Conta</a>
 									</div>
 								</div>
@@ -45,7 +52,7 @@
 											@if(session()->get('user')[0]['image']!=='none')
 												<img class=" mb-3" src="{{url('storage/doadores/'.session()->get('user')[0]['image'])}}" class="img-fluid" style="margin:auto; width: 100px; border-radius: 100px; margin-top: 0px; box-shadow: 0px 0px 1px;width:125px;height: 125px" />
 											@else
-												<img class="mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px; 	height:100px;border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
+												<img class="mb-3" src="./img/icone.jpg" class="img-fluid" style="margin:auto; width: 100px;height:100px;border-radius: 50px; margin-top: 0px; box-shadow: 0px 0px 1px" />
 											@endif
 										</div>
 										<div class="row">

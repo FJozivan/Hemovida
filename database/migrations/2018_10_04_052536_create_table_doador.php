@@ -50,6 +50,8 @@ class CreateTableDoador extends Migration
 
             $table->string('profissao',45);
 
+            $table->tinyInteger('quetionarioRespondido');
+
 
 
             //colunas padrão laravel

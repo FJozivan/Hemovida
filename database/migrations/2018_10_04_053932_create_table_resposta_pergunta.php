@@ -16,14 +16,16 @@ class CreateTableRespostaPergunta extends Migration
         Schema::create('resposta_perguntas', function (Blueprint $table) {
             
             //Minhas colunas
-            $table->increments('id_resposta');
+            $table->increments('id');
             $table->tinyInteger('resposta')->nullable($value = false);
             $table->integer('id_pergunta')->unsigned();
             $table->integer('id_doador')->unsigned();
             
             //Relação com tabelas
-            $table->foreign('id_pergunta')->references('id_pergunta')->on('pergunta_formularios');
+            $table->foreign('id_pergunta')->references('id')->on('pergunta_formularios');
             $table->foreign('id_doador')->references('id')->on('doadors');
+
+            $table->timestamps();
             
             //colunas padrão larav
         });

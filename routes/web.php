@@ -31,6 +31,7 @@ Route::get('/apagar_doador/{id}', 'master_controller@ApagarDoador');
 
 // Questionário doador
 Route::get('questionario', 'doadorController@Questionario');
+Route::post('/enviar_questionario', 'doadorController@salva_Questionario');
 
 // Hemoce
 Route::get('/login_hemoce', 'master_controller@FazerLogin');

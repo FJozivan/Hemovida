@@ -20,7 +20,7 @@ class CreateTableEmailParaDoador extends Migration
             $table->integer('id_doador')->unsigned();
 
             //Relação com tabelas
-            $table->foreign('id_email')->references('id_email')->on('emails');
+            $table->foreign('id_email')->references('id')->on('emails');
             $table->foreign('id_doador')->references('id')->on('doadors');
             
             //colunas padrão laravel
