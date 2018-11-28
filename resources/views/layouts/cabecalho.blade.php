@@ -19,7 +19,7 @@
 					<a class="nav-link" href="/">Doador</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Benefícios</a>
+					<a class="nav-link" href="/beneficios">Benefícios</a>
 				</li>
 				<li class="nav-item mr-5">
 					<a class="nav-link" href="/sobre">Sobre Nós</a>

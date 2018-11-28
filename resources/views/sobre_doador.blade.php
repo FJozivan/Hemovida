@@ -6,6 +6,11 @@
 @extends('layouts.cabecalho')
 @stop
 @section('corpo')
+<style>
+    .btn {
+        white-space: normal !important;
+    }    
+</style>
 <div class="mt-3" style="color: transparent">.</div>
 <div class="container mt-4" style="background-color: white; border-radius: 10px; box-shadow: 0px 0px 0px 0.4px; margin-top: 10px; margin-bottom: 10px;">
     <div class="row mr-2 ml-2">
@@ -19,7 +24,7 @@
     </div>
     <div class="row mr-2 ml-2 mt-4">
         <h2 class="col-sm-12" style="text-align: center; color: #3232ff;">Quem doa para quem?</h2>
-        <img class="img-fluid col-sm-12" style="max-height: 400px; margin-top: 20px; border-radius: 5px; display: block; margin-left: auto; margin-right: auto;" src="./img/doacao.png"/>
+        <img class="img-fluid col-sm-9" style="max-height: 400px; margin-top: 20px; border-radius: 5px; display: block; margin-left: auto; margin-right: auto;" src="./img/doacao.png"/>
     </div>
     <div class="row mr-2 ml-2 mt-4">
         <h2 class="col-sm-12" style="text-align: center; color: #3232ff;">Impedimentos temporários</h2>
@@ -383,7 +388,7 @@
         </div>
     </div>
     <div class="row mr-2 ml-2 mt-4">
-        <h2 class="col-sm-12" style="text-align: center; color: #3232ff;">Tratamentos/Medicamentos</h2>
+        <h2 class="col-sm-12" style="text-align: center; color: #3232ff;">Tratamentos / Medicamentos</h2>
         <div class="accordion col-sm-12 mt-2" id="accordionExample3">
             <div class="card">
                 <div class="card-header" id="headingTwentyFour">

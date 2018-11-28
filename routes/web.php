@@ -13,7 +13,8 @@
 // Links do Menu
 Route::get('/hemoce', 'homeController@Home');
 Route::get('/sobre', 'homeController@Sobre');
-Route::get('/', 'sobreDoadorController@SobreDoador');
+Route::get('/', 'sobreBeneficiosDoadorController@SobreDoador');
+Route::get('/beneficios', 'sobreBeneficiosDoadorController@BeneficiosDoador');
 
 // Login doador
 Route::get('/login_doador', 'loginController@FazerLogin');
