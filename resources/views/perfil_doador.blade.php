@@ -37,7 +37,9 @@
 												
 										@if (session()->get('user')[0]['quetionarioRespondido'] === 0)
 													<span class="badge badge-warning">1</span>	
-												@endif
+												@else
+												<span class="badge badge-warning">0</span>	
+													@endif
 												
 
 											</a>
