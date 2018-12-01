@@ -51,6 +51,20 @@
         <img class="img-fluid col-md-4" style="max-height: 200px; border-radius: 5px; display: block; margin-left: auto; margin-right: auto;" src="./img/check_up.jpg"/>
         <p class="mt-5 col-md-8" style="text-align: justify;">Além dos benefícios citados acima, o Hemoce dá direito a inúmeros exames que são realizados periodicamente, caso seja encontrado algum problema sanguíneo, como hemofilia, coagulopatias hereditárias, etc, a instituição oferece tratamento e  acompanhamento com profissionais especializados.</p>
     </div>
+
+    <div class="row mr-2 ml-2 mt-4">
+        <h2 class="col-sm-12" style="text-align: center; color: #3232ff;">Além do que foi falado, veja outros benefícios:</h2>
+        <ul class="col-sm-6 ml-4 mt-5" style="text-align: justify;">
+            <li>Responsabilidade social;</li><br>
+            <li>Solidariedade, responsabilidade, altruísmo;</li><br>
+            <li>A manutenção do estoque regular do hemocentro regional (Cariri - 28 cidades - confira o mapa ao lado);</li><br>
+            <li>Manutenção do ciclo de responsabilidade;</li><br>
+            <li>1 única doação (bolsa) pode salvar até 4 vidas (hemocomponentes): Plaquetas, Plasma, Crio e Hemácias;</li><br>
+            <li>Lembrando sempre que o sangue não pode ser fabricado em laboratório ou comprado direta ou indiretamente.</li><br>
+        </ul>
+        <img class="img-fluid col-md-6" style="max-height: 500px; max-width: 450px; border-radius: 5px; display: block; margin-left: auto; margin-right: auto;" src="./img/mapa_hemo.jpeg"/>   
+    </div>
+    
     <div class="row mr-2 ml-2 mt-4 mb-4">
         <h2 class="col-sm-12" style="text-align: center; color: #3232ff;">Relembre os requisitos básicos para a doação</h2>
         <ul class="col-sm-12 ml-4 mt-2" style="text-align: justify;">
@@ -63,5 +77,6 @@
             <li>Respeitar o intervalo mínimo entre as doações — 2 meses para os homens e 3 para as mulheres.</li>
         </ul>
     </div>
+
 </div>
 @stop
