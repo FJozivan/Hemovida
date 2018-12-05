@@ -87,9 +87,29 @@
 														<span> / </span>
 
 														{{-- deletar Doadores--}}
-														<a href="/apagar_doador/{{ $dado->id }}" class="btn btn-danger btn-sm" id="deletar">Deletar</a>
+														<a href="#" data-toggle="modal" data-target="#deletarDoador{{ $dado->id }}" class="btn btn-danger btn-sm" id="deletar">Deletar</a>
 													</td>
 												</tr>
+												<!-- Modal -->
+												<div class="modal fade" id="deletarDoador{{ $dado->id }}" tabindex="-1" role="dialog" aria-labelledby="deletarDoadorLabel" aria-hidden="true">
+												<div class="modal-dialog" role="document">
+													<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="deletarDoadorLabel">Deletar doador</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														Você tem certeza que deseja deletar o doador {{ $dado->nome }}?
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+														<a href="/apagar_doador/{{ $dado->id }}" class="btn btn-danger btn-sm">Deletar</a>
+													</div>
+													</div>
+												</div>
+												</div>
 												<?php $cont++?>
 												@endforeach	
 
