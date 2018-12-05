@@ -44,7 +44,27 @@
 
 											</a>
 										<a href="/editar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-info btn-sm mt-2">Editar Informações</a>
-										<a href="/apagar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-danger btn-sm mt-2">Excluir Conta</a>
+										{{-- <a href="/apagar_doador/{{session()->get('user')[0]['id']}}" class="btn btn-danger btn-sm mt-2">Excluir Conta</a> --}}
+										<a href="#" data-toggle="modal" data-target="#deletarDoador{{ session()->get('user')[0]['id'] }}" class="btn btn-danger btn-sm mt-2" id="deletar">Excluir Conta</a>
+										<div class="modal fade" id="deletarDoador{{ session()->get('user')[0]['id'] }}" tabindex="-1" role="dialog" aria-labelledby="deletarDoadorLabel" aria-hidden="true">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="deletarDoadorLabel">Excluir Conta?</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													Você tem certeza que deseja excluir sua conta?
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+													<a href="/apagar_doador/{{ session()->get('user')[0]['id'] }}" class="btn btn-danger btn-sm">Excluir</a>
+												</div>
+												</div>
+											</div>
+											</div>
 									</div>
 								</div>
 								<div class="row">

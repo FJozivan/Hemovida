@@ -71,7 +71,7 @@
 													<div class="modal-dialog" role="document">
 														<div class="modal-content">
 														<div class="modal-header">
-															<h5 class="modal-title" id="deletarFuncionarioLabel">Deletar funcionário</h5>
+															<h5 class="modal-title" id="deletarFuncionarioLabel">Deletar funcionário?</h5>
 															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 															<span aria-hidden="true">&times;</span>
 															</button>
